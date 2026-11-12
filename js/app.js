@@ -176,48 +176,13 @@
     const caixa = $('#trajePapeis');
     if (!caixa) return;
 
-    const papeis = [
-      {
-        chave: 'padrinhos',
-        titulo: 'Padrinhos',
-        icone: 'i-terno',
-        texto: 'Terno preto, camisa branca e gravata rosa bebê.',
-        reserva: 'Gravata rosa bebê é exclusiva dos padrinhos.',
-        cor: '#E9BCB6'
-      },
-      {
-        chave: 'madrinhas',
-        titulo: 'Madrinhas',
-        icone: 'i-vestido',
-        texto: 'Vestido rosa bebê.',
-        reserva: 'Vestido rosa bebê é exclusivo das madrinhas.',
-        cor: '#E9BCB6'
-      },
-      {
-        chave: 'noiva',
-        titulo: 'Noiva',
-        icone: 'i-vestido-noiva',
-        texto: 'A noiva vai de branco.',
-        reserva: 'Branco é reservado para a noiva.',
-        cor: '#FFFFFF'
-      },
-      {
-        chave: 'convidados',
-        titulo: 'Convidados',
-        icone: 'i-convidados',
-        texto: 'Roupa social modesta, que não mostre muitas partes do corpo.',
-        reserva: 'Sem gravata rosa, sem vestido rosa e sem branco.',
-        cor: null
-      }
-    ];
-
-    caixa.innerHTML = papeis.map((p) =>
-      '<article class="papel papel--' + p.chave + '">' +
-        '<svg class="papel__icone" aria-hidden="true"><use href="#' + p.icone + '"/></svg>' +
+    caixa.innerHTML = (CONFIG.trajes || []).map((p) =>
+      '<article class="papel papel--' + escapar(p.chave) + '">' +
+        '<svg class="papel__icone" aria-hidden="true"><use href="#' + escapar(p.icone) + '"/></svg>' +
         '<h4 class="papel__titulo">' + escapar(p.titulo) + '</h4>' +
         '<p class="papel__texto">' + escapar(p.texto) + '</p>' +
         '<p class="papel__reserva">' +
-          (p.cor ? '<span class="papel__amostra" style="--amostra:' + p.cor + '"></span>' : '') +
+          (p.cor ? '<span class="papel__amostra" style="--amostra:' + escapar(p.cor) + '"></span>' : '') +
           escapar(p.reserva) +
         '</p>' +
       '</article>'
