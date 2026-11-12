@@ -1,0 +1,322 @@
+/* ===================================================================
+   KENJI & DUDA — 20.06.2027
+   Cores tiradas do convite impresso e do monograma.
+   =================================================================== */
+
+:root {
+  /* base */
+  --creme:        #FEFDFB;
+  --creme-fundo:  #FEFCF8;
+  --creme-alt:    #FBF5F0;
+
+  /* rosa bebê */
+  --rosa-bebe:    #F9E9E6;
+  --rosa-claro:   #F3DAD6;
+  --rosa:         #E9BCB6;
+  --rosa-medio:   #DC9F97;
+
+  /* coral das letras script do convite */
+  --coral:        #E39C97;
+  --coral-forte:  #CE8179;
+
+  /* dourado do monograma */
+  --dourado:      #B79373;
+  --dourado-claro:#D4B896;
+  --dourado-fosco:#9E7D5F;
+
+  /* texto */
+  --tinta:        #4A3833;
+  --tinta-media:  #57423D;
+  --tinta-suave:  #7A6360;
+
+  /* linhas */
+  --linha:        rgba(183, 147, 115, .28);
+  --linha-forte:  rgba(183, 147, 115, .5);
+
+  /* sombras */
+  --sombra-sm: 0 2px 10px rgba(120, 90, 75, .06);
+  --sombra:    0 10px 34px -12px rgba(120, 90, 75, .22);
+  --sombra-lg: 0 30px 70px -28px rgba(120, 90, 75, .34);
+
+  /* tipografia */
+  --serif:  'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --script: 'Great Vibes', 'Segoe Script', cursive;
+  --sans:   'Jost', 'Gill Sans', 'Trebuchet MS', sans-serif;
+
+  /* layout */
+  --largura: 1180px;
+  --respiro: clamp(96px, 13vw, 196px);
+
+  /* movimento */
+  --suave: cubic-bezier(.22, .61, .36, 1);
+  --elastico: cubic-bezier(.16, 1, .3, 1);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--creme-fundo);
+  color: var(--tinta);
+  font-family: var(--sans);
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.75;
+  letter-spacing: .006em;
+  /* sem overflow no body: qualquer clip/hidden aqui desativa o
+     position: sticky da foto da história. O que precisa conter
+     transbordo já tem overflow no próprio elemento. */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body.travado { overflow: hidden; }
+
+img,
+picture,
+svg { display: block; max-width: 100%; }
+
+img { height: auto; }
+
+a {
+  color: var(--coral-forte);
+  text-decoration: none;
+  transition: color .3s var(--suave);
+}
+
+a:hover { color: var(--dourado-fosco); }
+
+h1, h2, h3, h4 {
+  margin: 0;
+  font-family: var(--serif);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: .01em;
+  color: var(--tinta);
+}
+
+p { margin: 0 0 1.15em; }
+p:last-child { margin-bottom: 0; }
+
+ul, ol { margin: 0; padding: 0; list-style: none; }
+
+button {
+  font: inherit;
+  color: inherit;
+  border: 0;
+  background: none;
+  cursor: pointer;
+}
+
+input, textarea, select {
+  font: inherit;
+  color: inherit;
+}
+
+::selection {
+  background: var(--coral);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 2px solid var(--coral);
+  outline-offset: 3px;
+  border-radius: 3px;
+}
+
+/* ---------- utilitários ---------- */
+
+.wrap {
+  position: relative;
+  /* acima das pétalas (z-index 75), abaixo do menu e dos avisos */
+  z-index: 80;
+  width: 100%;
+  max-width: var(--largura);
+  margin-inline: auto;
+  padding-inline: clamp(20px, 5vw, 48px);
+}
+
+.secao {
+  position: relative;
+  padding-block: var(--respiro);
+}
+
+/* ---------- cabeçalho de seção ---------- */
+
+.cabeca {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  margin-bottom: clamp(48px, 6.4vw, 78px);
+  text-align: center;
+}
+
+.cabeca__olho {
+  order: 1;
+  font-family: var(--sans);
+  font-size: .78rem;
+  font-weight: 400;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--dourado-fosco);
+}
+
+.cabeca__titulo {
+  order: 2;
+  font-size: clamp(2.1rem, 5.2vw, 3.3rem);
+  font-weight: 300;
+  color: var(--tinta);
+}
+
+.cabeca__titulo em {
+  font-style: normal;
+  font-family: var(--script);
+  font-size: 1.32em;
+  line-height: 1;
+  color: var(--coral);
+  padding-inline: .06em;
+}
+
+.cabeca__sub {
+  order: 3;
+  max-width: 46ch;
+  font-size: 1.06rem;
+  color: var(--tinta-media);
+  letter-spacing: .02em;
+}
+
+.cabeca__fio {
+  order: 4;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(210px, 60%);
+  margin-top: 4px;
+  color: var(--dourado);
+}
+
+.cabeca__fio::before,
+.cabeca__fio::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--linha-forte), transparent);
+}
+
+.cabeca__fio svg { width: 15px; height: 15px; opacity: .85; }
+
+/* ---------- botões ---------- */
+
+.botao {
+  --btn-bg: var(--coral);
+  --btn-fg: #fff;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .6em;
+  padding: 15px 34px;
+  border-radius: 999px;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  font-family: var(--sans);
+  font-size: .84rem;
+  font-weight: 500;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  box-shadow: 0 12px 28px -14px rgba(192, 107, 93, .75);
+  overflow: hidden;
+  transition: transform .35s var(--elastico), box-shadow .35s var(--suave), background .3s;
+}
+
+.botao::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,.42) 50%, transparent 70%);
+  transform: translateX(-130%);
+  transition: transform .85s var(--suave);
+}
+
+.botao:hover {
+  background: var(--coral-forte);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px -14px rgba(192, 107, 93, .8);
+}
+
+.botao:hover::after { transform: translateX(130%); }
+
+.botao:active { transform: translateY(0); }
+
+.botao--linha {
+  --btn-bg: transparent;
+  --btn-fg: var(--coral-forte);
+  border: 1px solid var(--linha-forte);
+  box-shadow: none;
+}
+
+.botao--linha:hover {
+  --btn-bg: rgba(208, 124, 109, .07);
+  --btn-fg: var(--coral-forte);
+  box-shadow: none;
+}
+
+.botao svg {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 auto;
+}
+
+/* botão do WhatsApp: ícone verde da marca sobre fundo claro */
+.botao--whats {
+  border-color: rgba(37, 211, 102, .42);
+  color: #1F7A48;
+}
+
+.botao--whats svg {
+  width: 21px;
+  height: 21px;
+  color: #25D366;
+  transition: transform .35s var(--elastico);
+}
+
+.botao--whats:hover {
+  border-color: #25D366;
+  background: rgba(37, 211, 102, .08);
+  color: #16663A;
+}
+
+.botao--whats:hover svg { transform: scale(1.08) rotate(-4deg); }
+
+/* ---------- revelação no scroll ---------- */
+
+.revelar {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .9s var(--suave), transform 1s var(--elastico);
+  transition-delay: var(--atraso, 0ms);
+  will-change: opacity, transform;
+}
+
+.revelar.visivel {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .revelar { opacity: 1 !important; transform: none !important; transition: none; }
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+  }
+}

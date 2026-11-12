@@ -1,0 +1,18 @@
+{
+  "rules": {
+    "reservas": {
+      ".read": true,
+      ".write": true,
+      "$item": {
+        ".validate": "newData.hasChild('d')"
+      }
+    },
+    "rsvp": {
+      ".read": "auth != null",
+      "$pessoa": {
+        ".write": true,
+        ".validate": "newData.hasChild('nome')"
+      }
+    }
+  }
+}

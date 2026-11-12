@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kenji &amp; Duda — 20 de junho de 2027</title>
+<meta name="description" content="O casamento de Kenji e Duda: nossa história, o grande dia, lista de presentes e confirmação de presença. 20 de junho de 2027, Bombinhas, Santa Catarina.">
+<meta name="theme-color" content="#FDFBF7">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kenji &amp; Duda — 20 de junho de 2027">
+<meta property="og:description" content="Nossa história, o grande dia, lista de presentes e confirmação de presença.">
+<meta property="og:image" content="assets/arte/compartilhar.jpg">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="icon" href="assets/arte/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/arte/favicon-180.png">
+<link rel="icon" href="assets/arte/favicon-192.png" sizes="192x192" type="image/png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Great+Vibes&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="preload" as="image" href="assets/arte/monograma.webp">
+
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/abertura.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/contagem.css">
+<link rel="stylesheet" href="css/historia.css">
+<link rel="stylesheet" href="css/dia.css">
+<link rel="stylesheet" href="css/presentes.css">
+<link rel="stylesheet" href="css/formulario.css">
+<link rel="stylesheet" href="css/interface.css">
+<link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+
+<!-- pétalas em todo o site -->
+<div class="petalas petalas--site" id="petalasSite" aria-hidden="true"></div>
+
+<!-- ============================================================
+     ÍCONES
+     ============================================================ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-coracao" viewBox="0 0 24 24">
+    <path d="M12 20.9C12 20.9 2.4 15 2.4 8.8 2.4 5.7 4.9 3.4 7.9 3.4c1.8 0 3.4 1 4.1 2.4.7-1.4 2.3-2.4 4.1-2.4 3 0 5.5 2.3 5.5 5.4 0 6.2-9.6 12.1-9.6 12.1z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-calendario" viewBox="0 0 24 24">
+    <rect x="3" y="5" width="18" height="16" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M3 10h18M8 2.8v4.2M16 2.8v4.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+    <path d="M12 15.6c0 0-2.8-1.6-2.8-3.3 0-.9.7-1.6 1.6-1.6.5 0 1 .3 1.2.7.2-.4.7-.7 1.2-.7.9 0 1.6.7 1.6 1.6 0 1.7-2.8 3.3-2.8 3.3z" fill="currentColor" opacity=".7"/>
+  </symbol>
+  <symbol id="i-relogio" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M12 6.8v5.6l3.6 2.1" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-ampulheta" viewBox="0 0 24 24">
+    <path d="M6.4 2.8h11.2M6.4 21.2h11.2M7.6 2.8c0 5.2 4.4 6.7 4.4 9.2s-4.4 4-4.4 9.2M16.4 2.8c0 5.2-4.4 6.7-4.4 9.2s4.4 4 4.4 9.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-segundos" viewBox="0 0 24 24">
+    <circle cx="12" cy="13.4" r="7.9" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M12 13.4V9.4M12 13.4l2.9 1.9M9.4 2.4h5.2" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-presente" viewBox="0 0 24 24">
+    <rect x="3.2" y="9.4" width="17.6" height="11.4" rx="1.8" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M2.4 9.4h19.2M12 9.4v11.4" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M12 9.4C9.3 9.4 6.4 8.3 6.4 6.4c0-1.4 1.2-2.4 2.7-2.4 1.9 0 2.9 2.5 2.9 5.4zm0 0c2.7 0 5.6-1.1 5.6-3 0-1.4-1.2-2.4-2.7-2.4-1.9 0-2.9 2.5-2.9 5.4z" fill="none" stroke="currentColor" stroke-width="1.4"/>
+  </symbol>
+  <symbol id="i-envelope" viewBox="0 0 24 24">
+    <rect x="2.4" y="5" width="19.2" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M3.2 6.4L12 13.2l8.8-6.8" fill="none" stroke="currentColor" stroke-width="1.4"/>
+  </symbol>
+  <symbol id="i-pino" viewBox="0 0 24 24">
+    <path d="M12 21.6s7-6.3 7-11.4A7 7 0 1 0 5 10.2c0 5.1 7 11.4 7 11.4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <circle cx="12" cy="10" r="2.5" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-seta" viewBox="0 0 24 24">
+    <path d="M4 12h15M13.4 6.4L19.8 12l-6.4 5.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-check" viewBox="0 0 24 24">
+    <path d="M4.6 12.6l4.8 4.8L19.4 7.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-x" viewBox="0 0 24 24">
+    <path d="M6.4 6.4l11.2 11.2M17.6 6.4L6.4 17.6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24">
+    <path d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.91-7.02zM12.05 20.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 8.24 8.25c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.15.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03s.87 2.35 1 2.51c.12.17 1.72 2.62 4.16 3.67.58.25 1.04.4 1.39.51.59.19 1.12.16 1.54.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-salao" viewBox="0 0 48 40">
+    <!-- o traço da placa "JW" no salão -->
+    <path d="M4 7h40M4 7l-2 2M44 7l2 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M8 9v24M40 9v24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M3 34h42" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <rect x="12" y="12" width="9" height="22" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <circle cx="18.6" cy="24" r=".9" fill="currentColor"/>
+    <rect x="24" y="12" width="14" height="17" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M24 30h14" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <text x="31" y="24.6" font-family="'Jost',sans-serif" font-size="9" font-weight="400" fill="currentColor" text-anchor="middle" letter-spacing=".5">JW</text>
+  </symbol>
+  <symbol id="i-terno" viewBox="0 0 48 48">
+    <path d="M18.5 6.5L12 9.5 8.5 14l4 3 3-2.5v11.5L13 40h22l-2.5-14V14.5l3 2.5 4-3-3.5-4.5-6.5-3"
+          fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M18.5 6.5L24 12l5.5-5.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M24 12l-1.8 2.6 1.8 2 1.8-2L24 12z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+    <path d="M24 16.6l-2 7.4 2 7.6 2-7.6-2-7.4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M24 12v4.6" fill="none" stroke="currentColor" stroke-width="1.4"/>
+  </symbol>
+
+  <!-- vestido -->
+  <symbol id="i-vestido" viewBox="0 0 48 48">
+    <path d="M19.6 8.4v-3M28.4 8.4v-3" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+    <path d="M24 7c-2.4 0-4.3 1.2-4.3 2.9 0 1.8 1.9 3.3 4.3 3.3s4.3-1.5 4.3-3.3c0-1.7-1.9-2.9-4.3-2.9z"
+          fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M18.6 9c-1.3 1.2-2.1 2.5-2.1 3.7 0 1.8 1 2.9 2.7 3.4l-1.6 3.6h12.8l-1.6-3.6c1.7-.5 2.7-1.6 2.7-3.4 0-1.2-.8-2.5-2.1-3.7"
+          fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M17.6 19.7h12.8" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M17.6 19.7c-2.6 3.7-4.4 7.8-5.3 11.9-.9 4.3-1 7.6-.3 10.4h24c.7-2.8.6-6.1-.3-10.4-.9-4.1-2.7-8.2-5.3-11.9"
+          fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M20.4 20.6l-3 21.4M27.6 20.6l3 21.4M24 20.6v21.4" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- vestido de noiva: mais longo e com véu -->
+  <symbol id="i-vestido-noiva" viewBox="0 0 48 48">
+    <path d="M24 4.5c3.4 2.4 5.4 6 5.4 10.4 0 2.4-.6 4.6-1.7 6.6h-7.4c-1.1-2-1.7-4.2-1.7-6.6 0-4.4 2-8 5.4-10.4z"
+          fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" opacity=".55"/>
+    <path d="M20 9.4c-.8 2.4-1.2 4.6-1.2 6.6M28 9.4c.8 2.4 1.2 4.6 1.2 6.6"
+          fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" opacity=".55"/>
+    <path d="M18.8 11.6c-1.3 1.2-2.1 2.5-2.1 3.7 0 1.8 1 2.9 2.7 3.4l-1.4 3.4h12l-1.4-3.4c1.7-.5 2.7-1.6 2.7-3.4 0-1.2-.8-2.5-2.1-3.7"
+          fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M17.8 22.1h12.4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M17.8 22.1c-3.3 4.4-5.6 9.2-6.6 14-.7 3.4-.7 6.3-.1 8.4h25.8c.6-2.1.6-5-.1-8.4-1-4.8-3.3-9.6-6.6-14"
+          fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round" stroke-linecap="round"/>
+    <path d="M20.6 23.2l-3.4 20.8M27.4 23.2l3.4 20.8M24 23.2v20.8" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/>
+  </symbol>
+
+  <!-- convidados: duas silhuetas discretas -->
+  <symbol id="i-convidados" viewBox="0 0 48 48">
+    <circle cx="18" cy="14" r="4.6" fill="none" stroke="currentColor" stroke-width="1.6"/>
+    <path d="M9.5 38c0-4.7 3.8-8.5 8.5-8.5s8.5 3.8 8.5 8.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+    <circle cx="32" cy="16.5" r="3.8" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <path d="M25.5 38c0-3.9 2.9-7.1 6.5-7.1s6.5 3.2 6.5 7.1" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+
+  <symbol id="i-som" viewBox="0 0 24 24">
+    <path d="M4 9v6h4l5 4.2V4.8L8 9H4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M16.6 8.4a5 5 0 0 1 0 7.2M19.2 5.8a8.6 8.6 0 0 1 0 12.4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-mudo" viewBox="0 0 24 24">
+    <path d="M4 9v6h4l5 4.2V4.8L8 9H4z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+    <path d="M16.6 9.4l5 5.2M21.6 9.4l-5 5.2" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+  </symbol>
+  <symbol id="i-musica" viewBox="0 0 24 24">
+    <path d="M9 17.6V5.2l11-2v12" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+    <circle cx="6.2" cy="17.8" r="2.8" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <circle cx="17.2" cy="15.8" r="2.8" fill="none" stroke="currentColor" stroke-width="1.4"/>
+  </symbol>
+  <symbol id="i-sino" viewBox="0 0 24 24">
+    <path d="M6 16.4V10a6 6 0 0 1 12 0v6.4l1.4 1.8H4.6L6 16.4z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+    <path d="M10 20.6a2.2 2.2 0 0 0 4 0" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+  </symbol>
+</svg>
+
+<!-- ============================================================
+     ABERTURA
+     ============================================================ -->
+<div class="abertura" id="abertura">
+  <div class="abertura__papel" aria-hidden="true"></div>
+  <div class="abertura__halo" aria-hidden="true"></div>
+  <div class="petalas" id="petalasAbertura" aria-hidden="true"></div>
+
+  <div class="abertura__conteudo">
+    <picture>
+      <source srcset="assets/arte/monograma.webp" type="image/webp">
+      <img class="abertura__monograma" src="assets/arte/monograma.png"
+           alt="Monograma K &amp; D com rosas cor-de-rosa" width="1608" height="926" fetchpriority="high">
+    </picture>
+
+    <div class="abertura__linha" aria-hidden="true">
+      <svg><use href="#i-coracao"/></svg>
+    </div>
+
+    <p class="abertura__convite">Convidamos você para celebrar</p>
+    <p class="abertura__data">20 de junho de 2027 · 15h30</p>
+
+    <button class="abertura__botao" id="btnEntrar" type="button">
+      Abrir o convite
+    </button>
+
+    <p class="abertura__som">
+      <span>
+        <svg aria-hidden="true"><use href="#i-musica"/></svg>
+        com música
+      </span>
+    </p>
+  </div>
+</div>
+
+<!-- ============================================================
+     TOPO
+     ============================================================ -->
+<div class="progresso-leitura" id="progressoLeitura" aria-hidden="true"></div>
+
+<div class="topo" id="topo">
+  <div class="topo__grade">
+    <a class="topo__marca" href="#inicio" aria-label="Kenji e Duda — início">
+      <span class="topo__iniciais" aria-hidden="true">K<i>&amp;</i>D</span>
+      <span class="topo__nomes" aria-hidden="true">Kenji &amp; Duda</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegação principal">
+      <a href="#inicio" style="--i:0">Início</a>
+      <a href="#historia" style="--i:1">Nossa história</a>
+      <a href="#dia" style="--i:2">O grande dia</a>
+      <a href="#presentes" style="--i:3">Presentes</a>
+      <a href="#confirmacao" style="--i:4">Confirmação</a>
+    </nav>
+
+    <button class="menu-btn" id="menuBtn" type="button"
+            aria-expanded="false" aria-controls="nav" aria-label="Abrir menu">
+      <span class="menu-btn__barras" aria-hidden="true"><i></i><i></i><i></i></span>
+    </button>
+  </div>
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<header class="hero" id="inicio">
+  <div class="hero__brilho" aria-hidden="true"></div>
+
+  <div class="wrap hero__grade">
+    <div class="hero__texto">
+      <div class="hero__marca">
+        <svg class="hero__coracao-fundo" viewBox="0 0 200 184" fill="none" aria-hidden="true">
+          <path d="M100 178S8 128 8 66C8 34 34 10 62 10c16 0 30 8 38 21 8-13 22-21 38-21 28 0 54 24 54 56 0 62-92 112-92 112z"
+                stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+          <path d="M100 162S26 120 26 68c0-24 19-42 40-42 13 0 25 7 34 20 9-13 21-20 34-20 21 0 40 18 40 42 0 52-74 94-74 94z"
+                stroke="currentColor" stroke-width=".9" stroke-linejoin="round"/>
+        </svg>
+
+        <p class="hero__olho">O nosso casamento</p>
+
+        <h1 class="hero__nomes">
+          <span class="hero__nome" style="--i:0">Kenji</span>
+          <span class="hero__e" aria-hidden="true">&amp;</span>
+          <span class="hero__nome" style="--i:1">Duda</span>
+        </h1>
+
+        <p class="hero__data">20 de junho de 2027</p>
+        <p class="hero__hora">às 15h30 · Bombinhas</p>
+      </div>
+
+      <p class="hero__frase">
+        Duas histórias, um encontro,
+        um amor que nos uniu
+        e uma vida inteira para compartilhar.
+      </p>
+
+      <svg class="hero__ornamento hero__ornamento--frase" viewBox="0 8 260 16" fill="none" aria-hidden="true">
+        <path d="M2 17C34 17 56 9 82 12c18 2 28 6 36 4" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity=".8"/>
+        <path d="M258 17c-32 0-54-8-80-5-18 2-28 6-36 4" stroke="currentColor" stroke-width="1" stroke-linecap="round" opacity=".8"/>
+        <path d="M130 22.4c0 0-6.6-4-6.6-7.9 0-2.1 1.6-3.6 3.5-3.6 1.3 0 2.5.8 3.1 1.9.6-1.1 1.8-1.9 3.1-1.9 1.9 0 3.5 1.5 3.5 3.6 0 3.9-6.6 7.9-6.6 7.9z" fill="currentColor"/>
+      </svg>
+    </div>
+
+    <figure class="hero__foto">
+      <picture>
+        <source srcset="assets/fotos/casal-rosto.webp" type="image/webp">
+        <img src="assets/fotos/casal-rosto.jpg" width="1000" height="1250"
+             alt="Kenji e Duda sorrindo, abraçados em um jardim"
+             decoding="async" fetchpriority="high">
+      </picture>
+    </figure>
+  </div>
+
+  <a class="hero__rolar" href="#contagem" aria-label="Rolar para a contagem regressiva">
+    <span aria-hidden="true"></span>
+    deslize
+  </a>
+</header>
+
+<!-- ============================================================
+     CONTAGEM + VERSÍCULO
+     ============================================================ -->
+<section class="contagem" id="contagem" aria-label="Contagem regressiva">
+  <div class="wrap">
+    <div class="revelar">
+      <p class="contagem__olho">Contagem Regressiva</p>
+      <h2 class="contagem__sub">Para o nosso <span>Grande Dia</span></h2>
+    </div>
+
+    <div class="contagem__deck revelar" id="deck" aria-live="polite">
+      <div class="cartao-tempo">
+        <span class="cartao-tempo__num" id="tDias">—</span>
+        <span class="cartao-tempo__rot">Dias</span>
+        <svg class="cartao-tempo__icone" aria-hidden="true"><use href="#i-calendario"/></svg>
+      </div>
+      <svg class="contagem__entre" aria-hidden="true"><use href="#i-coracao"/></svg>
+      <div class="cartao-tempo">
+        <span class="cartao-tempo__num" id="tHoras">—</span>
+        <span class="cartao-tempo__rot">Horas</span>
+        <svg class="cartao-tempo__icone" aria-hidden="true"><use href="#i-relogio"/></svg>
+      </div>
+      <svg class="contagem__entre" aria-hidden="true"><use href="#i-coracao"/></svg>
+      <div class="cartao-tempo">
+        <span class="cartao-tempo__num" id="tMin">—</span>
+        <span class="cartao-tempo__rot">Minutos</span>
+        <svg class="cartao-tempo__icone" aria-hidden="true"><use href="#i-ampulheta"/></svg>
+      </div>
+      <svg class="contagem__entre" aria-hidden="true"><use href="#i-coracao"/></svg>
+      <div class="cartao-tempo">
+        <span class="cartao-tempo__num" id="tSeg">—</span>
+        <span class="cartao-tempo__rot">Segundos</span>
+        <svg class="cartao-tempo__icone" aria-hidden="true"><use href="#i-segundos"/></svg>
+      </div>
+    </div>
+
+    <div class="versiculo-bloco revelar">
+      <div class="versiculo-bloco__marca">
+        <picture>
+          <source srcset="assets/arte/monograma.webp" type="image/webp">
+          <img src="assets/arte/monograma.png" alt="Monograma K &amp; D com rosas cor-de-rosa"
+               width="1608" height="926" loading="lazy" decoding="async">
+        </picture>
+      </div>
+
+      <div class="versiculo-bloco__corpo">
+        <span class="versiculo-bloco__aspas" aria-hidden="true">&ldquo;</span>
+        <p class="versiculo-bloco__texto" id="versiculoTexto"></p>
+        <span class="versiculo-bloco__ref" id="versiculoRef"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     NOSSA HISTÓRIA
+     ============================================================ -->
+<section class="secao historia" id="historia">
+  <div class="wrap">
+    <div class="cabeca revelar">
+      <h2 class="cabeca__titulo">Nossa <em>História</em></h2>
+      <div class="cabeca__fio" aria-hidden="true"><svg><use href="#i-coracao"/></svg></div>
+    </div>
+
+    <div class="historia__grade">
+      <div class="historia__moldura" id="historiaMoldura">
+        <figure class="historia__foto" id="historiaFoto">
+          <picture>
+            <source srcset="assets/fotos/casal-historia.webp" type="image/webp">
+            <img src="assets/fotos/casal-historia.jpg" width="1100" height="1297"
+                 alt="Kenji beijando Duda na frente das Cataratas, com um arco-íris ao fundo"
+                 loading="lazy" decoding="async">
+          </picture>
+          <figcaption class="historia__legenda">
+            Entre a força das águas e a beleza do arco-íris, encontramos
+            o nosso lugar favorito: um ao lado do outro.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="historia__texto revelar" id="historiaTexto"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     O GRANDE DIA
+     ============================================================ -->
+<section class="secao dia" id="dia">
+  <div class="wrap">
+    <div class="cabeca revelar">
+      <h2 class="cabeca__titulo">O Grande <em>Dia</em></h2>
+      <p class="cabeca__sub">Tudo o que você precisa saber para estar com a gente</p>
+      <div class="cabeca__fio" aria-hidden="true"><svg><use href="#i-coracao"/></svg></div>
+    </div>
+
+    <div class="dia__data revelar">
+      <span>Domingo</span>
+      <i aria-hidden="true"></i>
+      <span><b>20</b></span>
+      <i aria-hidden="true"></i>
+      <span>Junho</span>
+      <i aria-hidden="true"></i>
+      <span>2027</span>
+      <i aria-hidden="true"></i>
+      <span>15h30</span>
+    </div>
+
+    <div class="dia__locais" id="locais"></div>
+
+    <div class="cabeca cabeca--mapas revelar" style="margin-top:clamp(34px,5vw,54px)">
+      <p class="cabeca__olho">Como Chegar</p>
+      <h3 class="cabeca__titulo" style="font-size:clamp(1.5rem,4vw,2.1rem)">Mapa do <em>Local</em></h3>
+      <div class="cabeca__fio" aria-hidden="true"><svg><use href="#i-pino"/></svg></div>
+    </div>
+
+    <div class="mapas" id="mapas"></div>
+
+    <p class="mapas__nota revelar">
+      Toque no mapa para carregar as ruas. O botão <b>Como chegar</b> abre a rota no seu aplicativo de mapas.
+    </p>
+
+    <div class="traje revelar">
+      <div class="traje__cabeca">
+        <span class="traje__rot">Traje</span>
+        <h3 class="traje__nome" id="trajeNome"></h3>
+        <p class="traje__nota" id="trajeNota"></p>
+        <figure class="traje__arte">
+          <picture>
+            <source srcset="assets/arte/trajes.webp" type="image/webp">
+            <img src="assets/arte/trajes.png" width="900" height="884"
+                 alt="Ilustração de um smoking com gravata borboleta e um vestido de noiva"
+                 loading="lazy" decoding="async">
+          </picture>
+        </figure>
+      </div>
+
+      <div class="traje__papeis" id="trajePapeis"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LISTA DE PRESENTES
+     ============================================================ -->
+<section class="secao presentes" id="presentes">
+  <div class="wrap">
+    <div class="cabeca cabeca--presentes revelar">
+      <svg class="cabeca__icone" aria-hidden="true"><use href="#i-presente"/></svg>
+      <h2 class="cabeca__titulo">Lista de <em>Presentes</em></h2>
+      <p class="cabeca__sub">Para o nosso primeiro lar</p>
+      <div class="cabeca__fio" aria-hidden="true"><svg><use href="#i-coracao"/></svg></div>
+    </div>
+
+    <p class="presentes__intro revelar">
+      A sua presença já é o nosso maior presente. Mas se quiser nos ajudar a montar
+      a nossa casinha, esta é a lista que preparamos com tanto carinho.
+      <b>Reserve um item</b> para que ninguém escolha a mesma coisa.
+    </p>
+
+    <div class="presentes__barra revelar">
+      <div class="progresso">
+        <div class="progresso__trilha">
+          <div class="progresso__fill" id="progressoFill"></div>
+        </div>
+        <span class="progresso__texto" id="progressoTexto">0 de 0 reservados</span>
+      </div>
+
+      <div class="chips">
+        <button class="chip" id="chipMeus" type="button" aria-pressed="false">Só os meus</button>
+        <button class="chip" id="chipLivres" type="button" aria-pressed="false">Só os livres</button>
+      </div>
+    </div>
+
+    <div class="presentes__confirmacao" id="confirmacaoPresente" role="status" aria-live="polite" hidden>
+      <span class="presentes__confirmacao-icone" aria-hidden="true">
+        <svg><use href="#i-check"/></svg>
+      </span>
+      <div class="presentes__confirmacao-texto">
+        <b>Presente reservado com sucesso!</b>
+        <span id="confirmacaoItem"></span>
+        <small>Fica guardado no seu nome, e ninguém mais escolhe o mesmo item. Obrigado pelo carinho!</small>
+      </div>
+      <button class="presentes__confirmacao-fechar" id="fecharConfirmacao" type="button" aria-label="Fechar aviso">&times;</button>
+    </div>
+
+    <div class="categorias revelar" id="categorias" role="group" aria-label="Filtrar por categoria"></div>
+
+    <ul class="lista-presentes revelar" id="listaPresentes" aria-live="polite"></ul>
+
+    <div class="presentes__rodape revelar">
+      <p class="presentes__nota">
+        Reservou e mudou de ideia? Toque no item marcado como seu e escolha <b>Liberar</b>.
+        Ninguém vê quem reservou o quê, apenas que o item já foi escolhido.
+      </p>
+    </div>
+
+    <div class="surpresa revelar" id="surpresa">
+      <svg class="surpresa__icone" aria-hidden="true"><use href="#i-presente"/></svg>
+      <h3 class="surpresa__titulo">Prefere escolher na surpresa?</h3>
+      <p class="surpresa__txt">
+        Toque no botão e a gente sorteia um presente livre para você.
+        Fica reservado no seu nome na hora, e você nem precisa pensar.
+      </p>
+
+      <button class="botao" type="button" id="btnSortear">
+        <svg aria-hidden="true"><use href="#i-presente"/></svg>
+        Sortear meu presente
+      </button>
+
+      <div class="sorteio" id="sorteio" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONFIRMAÇÃO DE PRESENÇA
+     ============================================================ -->
+<section class="secao confirmacao" id="confirmacao">
+  <div class="wrap confirmacao__grade">
+
+    <div class="confirmacao__texto revelar">
+      <div class="cabeca" style="justify-items:start;text-align:left;margin-bottom:22px">
+        <h2 class="cabeca__titulo">Confirme sua <em>Presença</em></h2>
+        <div class="cabeca__fio" aria-hidden="true" style="width:150px"><svg><use href="#i-envelope"/></svg></div>
+      </div>
+
+      <p>
+        A gente quer cuidar de cada detalhe, do lugar à mesa, do bolo ao brinde.
+        Por isso, pedimos a gentileza de confirmar até:
+      </p>
+
+      <p class="confirmacao__prazo">
+        <svg aria-hidden="true"><use href="#i-calendario"/></svg>
+        <span id="prazoRsvp"></span>
+      </p>
+
+      <p style="margin-top:18px">
+        Se puder dizer quantas pessoas vêm com você, nós organizamos tudo com mais carinho.
+      </p>
+
+      <blockquote class="confirmacao__recado">
+        E se ainda não escolheu um presente, não se preocupe: a sua companhia nesse dia
+        já é tudo o que a gente quer.
+      </blockquote>
+
+      <div class="confirmacao__contato">
+        <a class="botao botao--linha botao--whats" id="btnWhatsConfirmacao" href="#" target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+          WhatsApp dos noivos
+        </a>
+      </div>
+    </div>
+
+    <div class="form-moldura revelar">
+      <form class="form" id="formRsvp" novalidate>
+        <div class="form__campos" id="formCampos">
+          <h3 class="form__titulo">Confirme sua presença</h3>
+          <p class="form__sub">Leva menos de um minuto</p>
+
+          <p class="form__aviso" id="formAviso" role="alert"></p>
+
+          <div class="campo">
+            <label for="nome">Seu nome completo</label>
+            <input type="text" id="nome" name="nome" autocomplete="name"
+                   placeholder="Como está no convite" maxlength="90" required>
+            <span class="campo__erro" id="erroNome">Escreva seu nome para a gente saber quem é.</span>
+          </div>
+
+          <div class="campo">
+            <label for="telefone">WhatsApp (opcional)</label>
+            <input type="tel" id="telefone" name="telefone" autocomplete="tel"
+                   inputmode="tel" placeholder="(47) 99999-9999" maxlength="20">
+          </div>
+
+          <div class="campo">
+            <span class="campo__rotulo">Você vai?</span>
+            <div class="opcoes">
+              <label class="opcao opcao--sim">
+                <input type="radio" name="vai" value="sim" checked>
+                <span><svg aria-hidden="true"><use href="#i-check"/></svg> Vou com certeza</span>
+              </label>
+              <label class="opcao opcao--nao">
+                <input type="radio" name="vai" value="nao">
+                <span><svg aria-hidden="true"><use href="#i-x"/></svg> Não vou poder</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="campo" id="campoAcompanhantes">
+            <span class="campo__rotulo">Quantas pessoas vêm com você?</span>
+            <div class="acompanhantes">
+              <div class="stepper">
+                <button type="button" id="menos" aria-label="Diminuir acompanhantes">&minus;</button>
+                <input type="number" id="acompanhantes" name="acompanhantes"
+                       min="0" max="6" value="0" inputmode="numeric" aria-label="Acompanhantes">
+                <button type="button" id="mais" aria-label="Aumentar acompanhantes">+</button>
+              </div>
+              <span class="campo__dica">Sem contar você.</span>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="recado">Deixe um recado (opcional)</label>
+            <textarea id="recado" name="recado" maxlength="400"
+                      placeholder="Um carinho para os noivos"></textarea>
+          </div>
+
+          <p class="campo--privacidade">
+            Sua resposta é enviada apenas para os noivos, para organizarem a festa.
+            Nada é publicado no site. Para corrigir ou apagar, é só falar com a gente.
+          </p>
+
+          <button class="botao" type="submit" id="btnEnviar" style="width:100%">
+            Confirmar presença
+          </button>
+        </div>
+
+        <div class="form__ok" id="formOk">
+          <div class="form__ok-icone" aria-hidden="true"><svg><use href="#i-check"/></svg></div>
+          <h3 id="formOkTitulo">Presença confirmada!</h3>
+          <p id="formOkTexto">Que alegria ter você com a gente nesse dia.</p>
+          <button class="botao botao--linha" type="button" id="btnEditar">
+            Editar resposta
+          </button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     RODAPÉ
+     ============================================================ -->
+<footer class="rodape">
+  <a href="#inicio" aria-label="Kenji e Duda — voltar ao início">
+    <picture>
+      <source srcset="assets/arte/monograma.webp" type="image/webp">
+      <img class="rodape__monograma" src="assets/arte/monograma.png"
+           alt="Monograma K &amp; D" width="1608" height="926" loading="lazy" decoding="async">
+    </picture>
+  </a>
+
+  <div class="rodape__linha">
+    <span>K &amp; D</span>
+    <svg aria-hidden="true"><use href="#i-coracao"/></svg>
+    <span>20.06.2027</span>
+  </div>
+
+  <p class="rodape__versiculo">
+    <span id="rodapeVersiculo" style="display:block;font-family:var(--serif);font-style:italic;text-transform:none;letter-spacing:0;font-size:1em;color:var(--tinta-suave)"></span>
+    <span id="rodapeReferencia"></span>
+  </p>
+
+  <div class="rodape__links">
+    <a class="rodape__link" id="linkWhats" href="#" target="_blank" rel="noopener">
+      <svg aria-hidden="true"><use href="#i-whatsapp"/></svg>
+      WhatsApp
+    </a>
+    <a class="rodape__link" href="#presentes">
+      <svg aria-hidden="true"><use href="#i-presente"/></svg>
+      Presentes
+    </a>
+    <a class="rodape__link" href="#confirmacao">
+      <svg aria-hidden="true"><use href="#i-envelope"/></svg>
+      Confirmar
+    </a>
+  </div>
+
+  <p class="rodape__credito">Feito com amor para celebrar o nosso grande dia.</p>
+</footer>
+
+<!-- ============================================================
+     MÚSICA
+     ============================================================ -->
+<div class="aviso-musica" id="avisoMusica" role="status" aria-live="polite">
+  <div class="aviso-musica__icone" aria-hidden="true"><svg><use href="#i-musica"/></svg></div>
+  <div class="aviso-musica__texto">
+    <b id="musicaRotulo">Tocando agora</b>
+    <span id="musicaNome"></span>
+  </div>
+  <button class="aviso-musica__fechar" id="fecharAviso" type="button" aria-label="Fechar aviso">&times;</button>
+</div>
+
+<button class="som" id="btnSom" type="button" aria-label="Pausar música" aria-pressed="false">
+  <svg class="icone-onde" aria-hidden="true"><use href="#i-som"/></svg>
+  <svg class="icone-mudo" aria-hidden="true"><use href="#i-mudo"/></svg>
+</button>
+
+<audio id="audio" loop preload="none"></audio>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="js/config.js"></script>
+<script src="js/app.js"></script>
+<script src="js/musica.js"></script>
+<script src="js/presentes.js"></script>
+<script src="js/presentes-ui.js"></script>
+<script src="js/rsvp.js"></script>
+<script src="js/interface.js"></script>
+</body>
+</html>

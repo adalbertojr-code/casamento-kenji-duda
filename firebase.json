@@ -1,0 +1,17 @@
+{
+  "database": {
+    "rules": "firebase-database.rules.json"
+  },
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "assets/_origem/**",
+      "tools/**",
+      "LEIA-ME.md"
+    ],
+    "cleanUrls": true
+  }
+}

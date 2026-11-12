@@ -1,0 +1,313 @@
+/* ===================================================================
+   HERO — duas colunas: texto à esquerda, foto emoldurada à direita.
+   Tudo dentro do mesmo wrap do menu, para o alinhamento bater.
+   =================================================================== */
+
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: clamp(104px, 13vh, 140px) 0 clamp(56px, 8vh, 88px);
+  background:
+    radial-gradient(ellipse 86% 70% at 24% 26%, #FFFEFC 0%, #FEFAF6 48%, #FBF1EC 100%);
+  overflow: hidden;
+}
+
+.hero__brilho {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 14% 22%, rgba(233,188,182,.4), transparent 46%),
+    radial-gradient(circle at 88% 78%, rgba(212,184,150,.28), transparent 50%);
+}
+
+/* usa exatamente a largura do wrap do menu */
+.hero__grade {
+  position: relative;
+  max-width: var(--largura);
+  margin-inline: auto;
+  padding-inline: 0;
+  /* acima das pétalas (z-index 50) */
+  z-index: 80;
+  display: grid;
+  grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr);
+  align-items: stretch;
+  gap: clamp(24px, 3.2vw, 52px);
+  /* a grade ocupa a largura exata do menu; a foto encosta na borda direita */
+  width: 100%;
+}
+
+/* ------------------------------------------------------------------
+   texto
+   ------------------------------------------------------------------ */
+
+/* centraliza o bloco de texto na altura da foto */
+.hero__texto {
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+  min-height: 100%;
+  padding-block: clamp(12px, 2vw, 28px);
+  /* o bloco vive à esquerda; o vazio à direita separa da foto */
+  justify-self: start;
+  margin-left: clamp(0px, 1vw, 18px);
+}
+
+.hero__olho {
+  font-size: clamp(.62rem, 1vw, .7rem);
+  font-weight: 400;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--dourado-fosco);
+  margin-bottom: clamp(4px, .8vw, 8px);
+  animation: aparecer 1.2s var(--suave) .15s both;
+}
+
+/* nome e "&" na mesma linha */
+.hero__nomes {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: clamp(3px, .7vw, 9px);
+  flex-wrap: nowrap;
+  margin: 0;
+  padding: clamp(6px, 1vw, 10px) 0;
+  line-height: 1;
+}
+
+/* a marca: coração grande com olho, nomes, ornamento, data e horário */
+.hero__marca {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  /* topo e base generosos: o coração é maior que o conteúdo */
+  padding: clamp(44px, 5vw, 60px) clamp(28px, 3.4vw, 42px) clamp(42px, 4.6vw, 54px);
+}
+
+.hero__coracao-fundo {
+  position: absolute;
+  left: 50%;
+  top: 26%;
+  width: clamp(215px, 25vw, 290px);
+  height: auto;
+  transform: translate(-50%, -50%) rotate(-3deg);
+  color: rgba(206, 129, 121, .26);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* tudo dentro do coração fica acima dele */
+.hero__marca > *:not(.hero__coracao-fundo) {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__nome,
+.hero__e {
+  position: relative;
+  z-index: 1;
+}
+
+.hero__nome {
+  font-family: var(--script);
+  font-weight: 400;
+  font-size: clamp(2.4rem, min(5.3vw, 8.2vh), 4.3rem);
+  line-height: 1.06;
+  white-space: nowrap;
+  color: var(--coral);
+  text-shadow: 0 2px 32px rgba(227,156,151,.25);
+  animation: nomeEntra 1.7s var(--elastico) both;
+  animation-delay: calc(.2s + var(--i, 0) * .22s);
+}
+
+@keyframes nomeEntra {
+  from { opacity: 0; transform: translateY(18px) scale(.97); filter: blur(6px); }
+  to   { opacity: 1; transform: none; filter: none; }
+}
+
+.hero__e {
+  font-family: var(--script);
+  font-size: clamp(1.35rem, min(2.7vw, 4.2vh), 2.1rem);
+  line-height: 1;
+  color: var(--dourado);
+  transform: translateY(-.1em);
+  animation: nomeEntra 1.7s var(--elastico) .42s both;
+}
+
+.hero__ornamento {
+  width: min(340px, 82%);
+  height: auto;
+  margin: clamp(12px, 2vw, 22px) 0 clamp(4px, .8vw, 8px);
+  color: var(--dourado);
+  overflow: visible;
+  animation: abrirFio 1.4s var(--suave) .8s both;
+}
+
+.hero__ornamento path:last-child {
+  color: var(--coral-forte);
+}
+
+@keyframes abrirFio {
+  from { opacity: 0; transform: scaleX(.3); }
+  to   { opacity: 1; transform: none; }
+}
+
+.hero__data {
+  margin-top: clamp(80px, 8.4vw, 108px);
+  font-family: var(--script);
+  font-size: clamp(1.7rem, min(3.4vw, 4.6vh), 2.5rem);
+  line-height: 1.2;
+  color: var(--coral-forte);
+  animation: aparecer 1.3s var(--suave) 1s both;
+}
+
+/* horário colado na data */
+.hero__hora {
+  margin-top: 2px;
+  font-family: var(--sans);
+  font-size: clamp(.68rem, 1vw, .8rem);
+  font-weight: 400;
+  letter-spacing: .28em;
+  text-transform: uppercase;
+  color: var(--dourado-fosco);
+  animation: aparecer 1.3s var(--suave) 1.1s both;
+}
+
+.hero__frase {
+  margin-top: clamp(30px, 4vw, 46px);
+  margin-bottom: 0;
+  max-width: 52ch;
+  font-family: var(--serif);
+  font-size: clamp(1.12rem, 1.5vw, 1.3rem);
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--tinta-media);
+  animation: aparecer 1.3s var(--suave) 1.2s both;
+}
+
+/* ------------------------------------------------------------------
+   foto — emoldurada, alinhada ao mesmo wrap do menu
+   ------------------------------------------------------------------ */
+
+/* a foto vai de ponta a ponta da coluna, alinhada ao menu */
+.hero__foto {
+  position: relative;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: var(--sombra-lg);
+  animation: aparecer 1.7s var(--suave) .35s both;
+}
+
+.hero__foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: min(62vh, 520px);
+  object-fit: cover;
+  object-position: 50% 24%;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(183, 147, 115, .34);
+}
+
+/* ------------------------------------------------------------------
+   rolagem
+   ------------------------------------------------------------------ */
+
+.hero__rolar {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(16px, 3vh, 28px);
+  /* acima das pétalas, como o resto do conteúdo */
+  z-index: 80;
+  transform: translateX(-50%);
+  display: grid;
+  justify-items: center;
+  gap: 7px;
+  font-size: .62rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+  animation: aparecer 1.6s var(--suave) 1.7s both;
+}
+
+.hero__rolar span {
+  display: block;
+  width: 1px;
+  height: 30px;
+  background: linear-gradient(180deg, var(--linha-forte), transparent);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__rolar span::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--coral);
+  animation: descer 2.4s cubic-bezier(.5,0,.5,1) infinite;
+}
+
+@keyframes descer {
+  0%   { transform: translateY(-100%); }
+  60%  { transform: translateY(100%); }
+  100% { transform: translateY(100%); }
+}
+
+/* ------------------------------------------------------------------
+   telas menores
+   ------------------------------------------------------------------ */
+
+@media (max-width: 940px) {
+  .hero {
+    min-height: auto;
+    padding-top: clamp(96px, 13vh, 120px);
+    padding-bottom: clamp(44px, 7vh, 68px);
+  }
+
+  .hero__grade {
+    grid-template-columns: 1fr;
+    gap: clamp(24px, 5vw, 38px);
+  }
+
+  .hero__foto { max-width: 440px; }
+
+  .hero__rolar { display: none; }
+}
+
+@media (max-width: 520px) {
+  .hero__nome { font-size: clamp(2.7rem, 14vw, 3.7rem); }
+  .hero__e { font-size: 1.5rem; }
+  .hero__ornamento { width: 82%; }
+  .hero__frase { font-size: 1.02rem; }
+  .hero__foto { max-width: 92vw; padding: 8px; }
+
+  /* no celular o coração acompanha a largura dos nomes */
+  .hero__marca {
+    padding: clamp(34px, 9vw, 46px) clamp(14px, 4vw, 22px) clamp(32px, 8vw, 42px);
+  }
+
+  .hero__coracao-fundo {
+    width: 94vw;
+    max-width: 420px;
+    top: 30%;
+  }
+
+  .hero__data {
+    margin-top: clamp(58px, 15vw, 82px);
+  }
+}
+
+/* filete que agora fecha a frase */
+.hero__ornamento--frase {
+  width: min(300px, 74%);
+  margin: clamp(10px, 1.4vw, 14px) auto 0;
+}
