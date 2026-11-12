@@ -213,8 +213,7 @@
   height: 100%;
   min-height: min(62vh, 520px);
   object-fit: cover;
-  /* o casal está no centro: o recorte pode comer mais o topo que os pés */
-  object-position: 50% 62%;
+  object-position: 50% 24%;
   border-radius: 2px;
   box-shadow: 0 0 0 1px rgba(183, 147, 115, .34);
 }
