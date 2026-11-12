@@ -218,6 +218,11 @@
   box-shadow: 0 0 0 1px rgba(183, 147, 115, .34);
 }
 
+/* no celular a arte já vem recortada para o quadro, então centraliza */
+@media (max-width: 940px) {
+  .hero__foto img { object-position: 50% 50%; }
+}
+
 /* ------------------------------------------------------------------
    rolagem
    ------------------------------------------------------------------ */
