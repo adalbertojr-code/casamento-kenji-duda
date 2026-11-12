@@ -48,11 +48,10 @@ const CONFIG = {
 
   /* ---------------- história ---------------- */
   historia: [
-    "Tudo começou há cerca de sete anos, quando nenhum dos dois imaginava que aquela amizade se transformaria em uma história de amor.",
-    "Ele era o melhor amigo do irmão dela e, por isso, estava sempre por perto, frequentando a casa da família e participando de muitos momentos com todos. Com o tempo, tornou-se alguém muito querido, especialmente pelo tio Maicon, com quem construiu uma amizade especial.",
-    "Eles praticamente cresceram juntos, entre conversas, encontros de família e tantos momentos que, na época, pareciam apenas parte da rotina. Ele nunca imaginou que um dia se apaixonaria pela irmã do seu melhor amigo. Mas, aos poucos, foi percebendo algo diferente nela. O jeito dela, humilde, simpático, amoroso e carinhoso, foi conquistando o coração dele. O que ele não sabia era que ela sentia o mesmo.",
-    "E assim, sem pressa e sem precisar de grandes acontecimentos, a amizade foi dando espaço a algo ainda mais bonito. Vieram o carinho, o companheirismo e a vontade de estar cada vez mais perto. Quando perceberam, já não conseguiam se imaginar em caminhos separados.",
-    "Hoje, depois de tantos anos e de tantas lembranças construídas a dois, chegou a hora de dar mais um passo nessa história: vamos nos casar! E não poderíamos viver esse momento sem a presença das pessoas que estiveram ao nosso lado e que, de alguma forma, também fazem parte dessa caminhada."
+    "Nós nos conhecemos há cerca de sete anos, quase sem perceber que ali começava a história mais bonita das nossas vidas. Ele sempre foi o melhor amigo do irmão dela e, por isso, frequentava a nossa casa como alguém da família. Era tão próximo de todos que logo conquistou um carinho especial, principalmente do tio Maicon, com quem criou uma amizade que só cresceu com o tempo.",
+    "Praticamente crescemos juntos, entre conversas, encontros de família e momentos simples que, sem que soubéssemos, estavam construindo algo muito maior. Ele nunca imaginou que um dia se casaria com a irmã do seu melhor amigo. Mas, dia após dia, ao ver o jeito humilde, simpático, amoroso e carinhoso dela, foi se apaixonando em silêncio. Mal ele sabia que, do outro lado, ela também estava se apaixonando por ele.",
+    "O que começou como amizade virou companheirismo, e o companheirismo virou amor. Fomos caminhando lado a lado, aprendendo um com o outro e descobrindo que tínhamos encontrado no outro a pessoa certa, que sempre esteve tão perto.",
+    "Hoje, depois de tantos anos de história, damos o passo mais especial da nossa caminhada: vamos nos casar! E queremos muito ter ao nosso lado as pessoas que fizeram e fazem parte dessa história."
   ],
 
   /* ---------------- contato ---------------- */
