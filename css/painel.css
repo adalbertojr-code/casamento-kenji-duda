@@ -1,0 +1,233 @@
+/* ===================================================================
+   PAINEL DOS NOIVOS — confirmações e presentes reservados
+   =================================================================== */
+
+.painel {
+  min-height: 100svh;
+  padding: clamp(28px, 5vw, 52px) clamp(16px, 4vw, 40px);
+  background:
+    radial-gradient(ellipse 80% 50% at 50% 0%, #FDF6F2, transparent 70%),
+    var(--creme-fundo);
+}
+
+.painel__wrap {
+  max-width: 1120px;
+  margin-inline: auto;
+}
+
+.painel__marca {
+  width: min(52vw, 220px);
+  margin: 0 auto clamp(16px, 3vw, 24px);
+}
+
+.painel__titulo {
+  text-align: center;
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 300;
+  color: var(--tinta);
+}
+
+.painel__sub {
+  text-align: center;
+  font-size: .8rem;
+  color: var(--tinta-suave);
+  margin-top: 6px;
+}
+
+/* ---- login ---- */
+
+.painel__login {
+  max-width: 380px;
+  margin: clamp(26px, 4vw, 40px) auto 0;
+}
+
+/* ---- números ---- */
+
+.painel__numeros {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px;
+  margin: clamp(24px, 4vw, 34px) 0 22px;
+}
+
+.numero {
+  padding: 18px 16px;
+  background: #fff;
+  border: 1px solid rgba(183, 147, 115, .22);
+  border-radius: 4px;
+  text-align: center;
+  box-shadow: var(--sombra-sm);
+}
+
+.numero__valor {
+  display: block;
+  font-family: var(--serif);
+  font-size: clamp(1.65rem, 4.4vw, 2.15rem);
+  font-weight: 300;
+  line-height: 1;
+  color: var(--coral);
+  font-variant-numeric: tabular-nums;
+}
+
+.numero__rot {
+  display: block;
+  margin-top: 6px;
+  font-size: .58rem;
+  font-weight: 400;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--tinta-suave);
+}
+
+/* ---- abas ---- */
+
+.painel__abas {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.aba {
+  padding: 10px 20px;
+  border-radius: 99px;
+  font-size: .66rem;
+  font-weight: 400;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--tinta-media);
+  border: 1px solid transparent;
+  transition: background .3s, color .3s, border-color .3s;
+}
+
+.aba:hover { background: rgba(208, 124, 109, .07); }
+
+.aba[aria-selected="true"] {
+  color: var(--coral-forte);
+  border-color: var(--linha-forte);
+  background: rgba(208, 124, 109, .08);
+}
+
+/* ---- tabela ---- */
+
+.painel__bloco { display: none; }
+.painel__bloco.ativo { display: block; }
+
+.tabela-moldura {
+  background: #fff;
+  border: 1px solid rgba(183, 147, 115, .22);
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: var(--sombra-sm);
+}
+
+.tabela-rolagem { overflow-x: auto; }
+
+.tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .84rem;
+}
+
+.tabela th {
+  text-align: left;
+  padding: 12px 14px;
+  font-size: .58rem;
+  font-weight: 400;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--dourado-fosco);
+  background: #FCF8F5;
+  border-bottom: 1px solid rgba(183, 147, 115, .2);
+  white-space: nowrap;
+}
+
+.tabela td {
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(183, 147, 115, .12);
+  color: var(--tinta-media);
+  vertical-align: top;
+}
+
+.tabela tr:last-child td { border-bottom: 0; }
+
+.tabela tbody tr:hover td { background: #FDFAF8; }
+
+.tabela__nome {
+  font-weight: 400;
+  color: var(--tinta);
+  white-space: nowrap;
+}
+
+.selo {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  border-radius: 99px;
+  font-size: .58rem;
+  font-weight: 400;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.selo--sim { background: rgba(160, 180, 130, .16); color: #5F7345; }
+.selo--nao { background: rgba(200, 140, 130, .16); color: #A2605A; }
+
+.tabela__recado {
+  max-width: 320px;
+  font-size: .78rem;
+  line-height: 1.55;
+  color: var(--tinta-suave);
+}
+
+.painel__vazio {
+  padding: 46px 20px;
+  text-align: center;
+  color: var(--tinta-suave);
+  font-size: .88rem;
+}
+
+/* ---- barra de ferramentas ---- */
+
+.painel__ferramentas {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.painel__ferramentas .botao { padding: 11px 22px; font-size: .64rem; }
+
+/* ---- ligar banco ---- */
+
+.aviso-banco {
+  margin-top: 20px;
+  padding: 20px 22px;
+  border-radius: 4px;
+  background: #FCF6F2;
+  border: 1px solid var(--linha-forte);
+  font-size: .84rem;
+  line-height: 1.7;
+  color: var(--tinta-media);
+}
+
+.aviso-banco b { color: var(--coral-forte); font-weight: 500; }
+
+.aviso-banco code {
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: .82em;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: rgba(183, 147, 115, .14);
+  color: var(--tinta);
+}
+
+@media (max-width: 640px) {
+  .tabela th, .tabela td { padding: 10px; }
+  .tabela__recado { max-width: 180px; }
+}

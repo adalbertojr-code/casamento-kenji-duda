@@ -1,0 +1,61 @@
+/* ===================================================================
+   AJUSTES FINOS DE TELA
+   =================================================================== */
+
+/* telas grandes */
+@media (min-width: 1400px) {
+  :root { --largura: 1240px; }
+  body { font-size: 18px; }
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+  :root { --respiro: clamp(56px, 8vw, 92px); }
+}
+
+/* celular */
+@media (max-width: 640px) {
+  body { font-size: 16px; line-height: 1.72; }
+
+  .wrap { padding-inline: 20px; }
+
+  .cabeca { margin-bottom: 30px; }
+
+  .cabeca__titulo { font-size: clamp(1.75rem, 8.4vw, 2.3rem); }
+
+  .secao { padding-block: clamp(48px, 12vw, 68px); }
+}
+
+/* paisagem baixa (celular deitado) */
+@media (max-height: 520px) and (orientation: landscape) {
+  .hero { min-height: auto; padding-block: 120px 60px; }
+  .hero__foto { display: none; }
+  .hero__rolar { display: none; }
+}
+
+/* impressão */
+@media print {
+  .abertura,
+  .topo,
+  .som,
+  .aviso-musica,
+  .toast,
+  .progresso-leitura { display: none !important; }
+
+  body { background: #fff; color: #000; }
+
+  .revelar { opacity: 1 !important; transform: none !important; }
+
+  .mapa__tela iframe { display: none; }
+}
+
+/* contraste alto */
+@media (prefers-contrast: more) {
+  :root {
+    --tinta: #2E211E;
+    --tinta-media: #3F2E29;
+    --tinta-suave: #4A3833;
+    --linha: rgba(120, 90, 75, .5);
+    --linha-forte: rgba(120, 90, 75, .75);
+  }
+}

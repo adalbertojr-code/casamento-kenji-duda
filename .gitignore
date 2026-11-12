@@ -1,0 +1,21 @@
+# originais e arquivos de trabalho: ficam no computador, não no site
+assets/_origem/
+tools/
+
+# sistema e editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# dependências e caches
+node_modules/
+__pycache__/
+*.pyc
+
+# nunca versione segredos
+.env
+.env.*
+*serviceAccount*.json
+.firebase/
+firebase-debug.log
