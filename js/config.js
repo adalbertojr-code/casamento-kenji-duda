@@ -110,9 +110,9 @@ const CONFIG = {
      Quando criar o Firebase, troque para "firebase" e cole as duas
      chaves abaixo. O passo a passo está no LEIA-ME. */
   infra: {
-    modo: "local",
-    firebaseUrl: "",   // ex.: https://kenji-duda-default-rtdb.firebaseio.com
-    firebaseKey: ""    // ex.: AIzaSy...  (chave WEB, pode ficar no site)
+    modo: "firebase",
+    firebaseUrl: "https://kenji-duda-default-rtdb.firebaseio.com",
+    firebaseKey: "AIzaSyAsjEUE5rUMlzEWeSHjk9AeKf3pXf8T_5c"
   },
 
   /* ---------------- painel dos noivos ----------------
@@ -121,7 +121,7 @@ const CONFIG = {
      arquivo é público e qualquer visitante consegue ler.
      A senha só é exigida no servidor, pelas regras do banco. */
   painel: {
-    email: ""          // ex.: "noivos@kenjiduda.com"
+    email: "painel@kenjiduda.com"
   },
 
   /* ---------------- presentes ---------------- */
