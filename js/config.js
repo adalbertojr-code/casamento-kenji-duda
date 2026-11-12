@@ -46,12 +46,13 @@ const CONFIG = {
   trajeMadrinhas: "Vestido rosa bebê. Pedimos que as convidadas não usem vestido nessa cor, por ser o traje das madrinhas.",
   trajeNoiva: "A noiva vai de branco. Pedimos que as convidadas não usem branco.",
 
-  /* ---------------- história (texto de exemplo — trocar) ---------------- */
+  /* ---------------- história ---------------- */
   historia: [
-    "Tudo começou há cerca de sete anos, quase sem que percebessem que ali nascia a história mais bonita das suas vidas. Ele sempre foi o melhor amigo do irmão dela e, por isso, frequentava a casa da família como alguém de casa. Era tão próximo de todos que logo conquistou um carinho especial, principalmente do tio Maicon, com quem criou uma amizade que só cresceu com o tempo.",
-    "Praticamente cresceram juntos, entre conversas, encontros de família e momentos simples que, sem que percebessem, estavam construindo algo muito maior. Ele nunca imaginou que um dia se casaria com a irmã do seu melhor amigo. Mas, dia após dia, ao ver o jeito humilde, simpático, amoroso e carinhoso dela, ele foi se apaixonando em silêncio. Mal ele sabia que, do outro lado, ela também estava se apaixonando por ele.",
-    "O que começou como amizade virou companheirismo, e o companheirismo virou amor. Foram caminhando lado a lado, aprendendo um com o outro e descobrindo que a pessoa certa sempre estivera ali, tão perto.",
-    "Hoje, depois de tantos anos dessa história, damos o passo mais especial da nossa caminhada: vamos nos casar! E queremos muito ter ao nosso lado as pessoas que fizeram e fazem parte dela."
+    "Tudo começou há cerca de sete anos, quando nenhum dos dois imaginava que aquela amizade se transformaria em uma história de amor.",
+    "Ele era o melhor amigo do irmão dela e, por isso, estava sempre por perto, frequentando a casa da família e participando de muitos momentos com todos. Com o tempo, tornou-se alguém muito querido, especialmente pelo tio Maicon, com quem construiu uma amizade especial.",
+    "Eles praticamente cresceram juntos, entre conversas, encontros de família e tantos momentos que, na época, pareciam apenas parte da rotina. Ele nunca imaginou que um dia se apaixonaria pela irmã do seu melhor amigo. Mas, aos poucos, foi percebendo algo diferente nela. O jeito dela, humilde, simpático, amoroso e carinhoso, foi conquistando o coração dele. O que ele não sabia era que ela sentia o mesmo.",
+    "E assim, sem pressa e sem precisar de grandes acontecimentos, a amizade foi dando espaço a algo ainda mais bonito. Vieram o carinho, o companheirismo e a vontade de estar cada vez mais perto. Quando perceberam, já não conseguiam se imaginar em caminhos separados.",
+    "Hoje, depois de tantos anos e de tantas lembranças construídas a dois, chegou a hora de dar mais um passo nessa história: vamos nos casar! E não poderíamos viver esse momento sem a presença das pessoas que estiveram ao nosso lado e que, de alguma forma, também fazem parte dessa caminhada."
   ],
 
   /* ---------------- contato ---------------- */
