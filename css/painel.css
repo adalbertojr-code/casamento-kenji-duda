@@ -30,7 +30,7 @@
 
 .painel__sub {
   text-align: center;
-  font-size: .8rem;
+  font-size: .92rem;
   color: var(--tinta-suave);
   margin-top: 6px;
 }
@@ -73,9 +73,9 @@
 .numero__rot {
   display: block;
   margin-top: 6px;
-  font-size: .58rem;
+  font-size: .72rem;
   font-weight: 400;
-  letter-spacing: .2em;
+  letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--tinta-suave);
 }
@@ -93,9 +93,9 @@
 .aba {
   padding: 10px 20px;
   border-radius: 99px;
-  font-size: .66rem;
+  font-size: .78rem;
   font-weight: 400;
-  letter-spacing: .14em;
+  letter-spacing: .1em;
   text-transform: uppercase;
   color: var(--tinta-media);
   border: 1px solid transparent;
@@ -128,15 +128,15 @@
 .tabela {
   width: 100%;
   border-collapse: collapse;
-  font-size: .84rem;
+  font-size: .94rem;
 }
 
 .tabela th {
   text-align: left;
   padding: 12px 14px;
-  font-size: .58rem;
+  font-size: .72rem;
   font-weight: 400;
-  letter-spacing: .18em;
+  letter-spacing: .12em;
   text-transform: uppercase;
   color: var(--dourado-fosco);
   background: #FCF8F5;
@@ -167,9 +167,9 @@
   gap: 5px;
   padding: 4px 10px;
   border-radius: 99px;
-  font-size: .58rem;
+  font-size: .74rem;
   font-weight: 400;
-  letter-spacing: .1em;
+  letter-spacing: .06em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -179,8 +179,8 @@
 
 .tabela__recado {
   max-width: 320px;
-  font-size: .78rem;
-  line-height: 1.55;
+  font-size: .88rem;
+  line-height: 1.6;
   color: var(--tinta-suave);
 }
 
@@ -201,7 +201,7 @@
   flex-wrap: wrap;
 }
 
-.painel__ferramentas .botao { padding: 11px 22px; font-size: .64rem; }
+.painel__ferramentas .botao { padding: 11px 22px; font-size: .76rem; }
 
 /* ---- ligar banco ---- */
 
