@@ -48,8 +48,8 @@ const CONFIG = {
 
   /* ---------------- história ---------------- */
   historia: [
-    "Nós nos conhecemos há cerca de sete anos, quase sem perceber que ali começava a história mais bonita das nossas vidas. Ele sempre foi o melhor amigo do irmão dela e, por isso, frequentava a nossa casa como alguém da família. Era tão próximo de todos que logo conquistou um carinho especial, principalmente do tio Maicon, com quem criou uma amizade que só cresceu com o tempo.",
-    "Praticamente crescemos juntos, entre conversas, encontros de família e momentos simples que, sem que soubéssemos, estavam construindo algo muito maior. Ele nunca imaginou que um dia se casaria com a irmã do seu melhor amigo. Mas, dia após dia, ao ver o jeito humilde, simpático, amoroso e carinhoso dela, foi se apaixonando em silêncio. Mal ele sabia que, do outro lado, ela também estava se apaixonando por ele.",
+    "Nós nos conhecemos há cerca de sete anos, quase sem perceber que ali começava a história mais bonita das nossas vidas. Ele sempre foi o melhor amigo do irmão dela e, por isso, frequentava a nossa casa como alguém da família. Era tão próximo de todos que logo conquistou um carinho especial, principalmente do tio Maicon, que foi seu instrutor e com quem criou uma amizade muito especial.",
+    "Praticamente crescemos juntos, entre conversas, encontros de família e momentos simples que, sem que soubéssemos, estavam construindo algo muito maior. Ele nunca imaginou que um dia se casaria com a irmã do seu melhor amigo. Mas, dia após dia, ao ver como ela era humilde, simpática, amorosa e carinhosa, foi se apaixonando em silêncio. Mal ele sabia que, do outro lado, ela também estava se apaixonando por ele.",
     "O que começou como amizade virou companheirismo, e o companheirismo virou amor. Fomos caminhando lado a lado, aprendendo um com o outro e descobrindo que tínhamos encontrado no outro a pessoa certa, que sempre esteve tão perto.",
     "Hoje, depois de tantos anos de história, damos o passo mais especial da nossa caminhada: vamos nos casar! E queremos muito ter ao nosso lado as pessoas que fizeram e fazem parte dessa história."
   ],
