@@ -171,7 +171,9 @@
     },
 
     ehMinha(reserva) {
-      return reserva === meuId;
+      if (!reserva) return false;
+      const dono = typeof reserva === 'string' ? reserva : reserva.d;
+      return dono === meuId;
     }
   };
 })();

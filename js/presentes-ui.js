@@ -59,6 +59,12 @@
     });
   }
 
+  // a reserva vem do banco como { d: <id de quem reservou>, t: <quando> }
+  function idDono(reserva) {
+    if (!reserva) return null;
+    return typeof reserva === 'string' ? reserva : reserva.d || null;
+  }
+
   function desenhar() {
     const lista = $('#listaPresentes');
     if (!lista) return;
@@ -66,7 +72,7 @@
     const filtrados = itens.filter((item) => {
       if (categoriaAtiva !== 'todas' && item.categoria !== categoriaAtiva) return false;
 
-      const dono = reservas[item.id];
+      const dono = idDono(reservas[item.id]);
       if (filtro === 'meus') return dono === window.Presentes.meuId;
       if (filtro === 'livres') return !dono;
       return true;
@@ -78,7 +84,7 @@
     }
 
     lista.innerHTML = filtrados.map((item) => {
-      const dono = reservas[item.id];
+      const dono = idDono(reservas[item.id]);
       const meu = dono === window.Presentes.meuId;
       const ocupado = Boolean(dono) && !meu;
 
