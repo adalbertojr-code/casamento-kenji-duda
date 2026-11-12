@@ -266,9 +266,11 @@
 
     <figure class="hero__foto">
       <picture>
-        <source srcset="assets/fotos/casal-rosto.webp" type="image/webp">
-        <img src="assets/fotos/casal-rosto.jpg" width="1000" height="1250"
-             alt="Kenji e Duda sorrindo, abraçados em um jardim"
+        <source media="(max-width: 940px)" srcset="assets/fotos/hero-mobile.webp" type="image/webp">
+        <source media="(max-width: 940px)" srcset="assets/fotos/hero-mobile.jpg" type="image/jpeg">
+        <source srcset="assets/fotos/hero-desktop.webp" type="image/webp">
+        <img src="assets/fotos/hero-desktop.jpg" width="1000" height="1250"
+             alt="Kenji e Duda sorrindo, abraçados em um jardim iluminado"
              decoding="async" fetchpriority="high">
       </picture>
     </figure>
