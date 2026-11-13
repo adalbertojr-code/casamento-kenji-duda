@@ -104,11 +104,10 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) rotate(-3deg);
-  /* largura manda e a altura acompanha pela proporção do desenho: definir
-     as duas em % de caixas diferentes esticava o coração (1,93 em vez de 1,09) */
-  width: 84vw;
+  /* a largura manda e a altura acompanha a proporção do desenho: definir as
+     duas em % de caixas diferentes esticava o coração (1,93 em vez de 1,09) */
+  width: 118%;
   height: auto;
-  max-width: 84vw;
   color: rgba(206, 129, 121, .26);
   pointer-events: none;
   z-index: 0;
@@ -319,9 +318,10 @@
     padding: 22px clamp(26px, 8vw, 40px);
   }
 
-  /* espaço para a ponta do coração, que desce abaixo da caixa do texto */
-  .hero__data {
-    margin-top: 78px;
+  /* no celular o bloco de texto é largo (332px), então 100% já dá um
+     coração de ~350px; mais que isso estoura a tela de 375 */
+  .hero__coracao-fundo {
+    width: 100%;
   }
 }
 
