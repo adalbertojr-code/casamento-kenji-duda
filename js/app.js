@@ -32,6 +32,13 @@
       if (!numero) return '';
       const query = mensagem ? '?text=' + encodeURIComponent(mensagem) : '';
       return 'https://wa.me/' + numero + query;
+    },
+
+    // "20 de junho de 2027", para usar em mensagens
+    dataDoCasamento() {
+      const quando = CONFIG.data ? new Date(CONFIG.data) : null;
+      if (!quando || isNaN(quando)) return '';
+      return quando.toLocaleDateString('pt-BR', { day: 'numeric', month: 'long', year: 'numeric' });
     }
   };
 
