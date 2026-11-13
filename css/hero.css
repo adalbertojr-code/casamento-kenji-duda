@@ -102,7 +102,7 @@
   max-width: 420px;
   aspect-ratio: 200 / 184;
   /* o coração afina embaixo: o texto fica na metade de cima, onde há espaço */
-  padding: 0 12% 18%;
+  padding: 0 12% 10%;
 }
 
 .hero__coracao-fundo {
@@ -317,7 +317,7 @@
   }
 
   .hero__dentro-corao {
-    padding: 0 10% 16%;
+    padding: 0 10% 8%;
   }
 
   /* os nomes ocupam quase toda a largura do coração no celular */
