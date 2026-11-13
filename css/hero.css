@@ -50,6 +50,8 @@
   justify-items: center;
   text-align: center;
   min-height: 100%;
+  /* sem isso o item do grid assume a largura do conteúdo e estoura a coluna */
+  min-width: 0;
   padding-block: clamp(12px, 2vw, 28px);
   /* o bloco vive à esquerda; o vazio à direita separa da foto */
   justify-self: start;
@@ -84,24 +86,36 @@
   position: relative;
   display: grid;
   justify-items: center;
-  /* topo e base generosos: o coração é maior que o conteúdo */
-  padding: clamp(44px, 5vw, 60px) clamp(28px, 3.4vw, 42px) clamp(42px, 4.6vw, 54px);
+  /* o respiro acompanha o coração, que é dimensionado pelos nomes */
+  padding: clamp(30px, 7vw, 54px) clamp(20px, 4vw, 42px) clamp(34px, 7.5vw, 52px);
+}
+
+/* área que o coração envolve: só o olho e os nomes, como no desktop */
+.hero__dentro-corao {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: inherit;
+  padding: clamp(18px, 4.4vw, 34px) clamp(16px, 3vw, 30px);
 }
 
 .hero__coracao-fundo {
   position: absolute;
   left: 50%;
-  top: 26%;
-  width: clamp(215px, 25vw, 290px);
-  height: auto;
+  top: 50%;
   transform: translate(-50%, -50%) rotate(-3deg);
+  /* um pouco maior que a caixa para as bordas do desenho passarem dela */
+  height: 118%;
+  width: 118%;
   color: rgba(206, 129, 121, .26);
   pointer-events: none;
   z-index: 0;
+  overflow: visible;
+  max-width: none;
 }
 
 /* tudo dentro do coração fica acima dele */
-.hero__marca > *:not(.hero__coracao-fundo) {
+.hero__dentro-corao > *:not(.hero__coracao-fundo) {
   position: relative;
   z-index: 1;
 }
@@ -157,7 +171,7 @@
 }
 
 .hero__data {
-  margin-top: clamp(80px, 8.4vw, 108px);
+  margin-top: clamp(18px, 3.2vw, 30px);
   font-family: var(--script);
   font-size: clamp(1.7rem, min(3.4vw, 4.6vh), 2.5rem);
   line-height: 1.2;
@@ -180,7 +194,9 @@
 .hero__frase {
   margin-top: clamp(30px, 4vw, 46px);
   margin-bottom: 0;
-  max-width: 52ch;
+  /* 52ch pode ser mais largo que a coluna no celular e estourar a grade */
+  width: 100%;
+  max-width: min(52ch, 100%);
   font-family: var(--serif);
   font-size: clamp(1.12rem, 1.5vw, 1.3rem);
   font-style: italic;
@@ -274,7 +290,7 @@
   }
 
   .hero__grade {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: clamp(24px, 5vw, 38px);
   }
 
@@ -284,25 +300,21 @@
 }
 
 @media (max-width: 520px) {
-  .hero__nome { font-size: clamp(2.7rem, 14vw, 3.7rem); }
+  /* 14vw dos dois nomes + "&" estoura a coluna; 11vw cabe com folga */
+  .hero__nome { font-size: clamp(2.1rem, 11vw, 3rem); }
   .hero__e { font-size: 1.5rem; }
   .hero__ornamento { width: 82%; }
   .hero__frase { font-size: 1.02rem; }
-  .hero__foto { max-width: 92vw; padding: 8px; }
+  /* 92vw deixava a foto com quase a altura da tela inteira */
+  .hero__foto { max-width: 78vw; padding: 8px; }
+  .hero__foto img { min-height: 0; }
 
-  /* no celular o coração acompanha a largura dos nomes */
   .hero__marca {
-    padding: clamp(34px, 9vw, 46px) clamp(14px, 4vw, 22px) clamp(32px, 8vw, 42px);
+    padding: 26px clamp(14px, 4vw, 22px) 30px;
   }
 
-  .hero__coracao-fundo {
-    width: 94vw;
-    max-width: 420px;
-    top: 30%;
-  }
-
-  .hero__data {
-    margin-top: clamp(58px, 15vw, 82px);
+  .hero__dentro-corao {
+    padding: 20px clamp(14px, 4vw, 24px);
   }
 }
 
