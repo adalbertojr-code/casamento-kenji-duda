@@ -98,8 +98,8 @@
   place-content: center;
   justify-items: center;
   gap: inherit;
-  width: min(122%, 430px);
-  max-width: 86vw;
+  width: min(138%, 490px);
+  max-width: 90vw;
   aspect-ratio: 200 / 184;
   /* o bloco fica no meio vertical do coração: 22% de respiro em cima e
      embaixo, medido. Mais que isso deixava um vazio grande na ponta */
@@ -306,7 +306,7 @@
 
 @media (max-width: 520px) {
   /* 14vw dos dois nomes + "&" estoura a coluna; 11vw cabe com folga */
-  .hero__nome { font-size: clamp(2.3rem, 12.4vw, 3.3rem); }
+  .hero__nome { font-size: clamp(2rem, 10.4vw, 2.9rem); }
   .hero__e { font-size: 1.5rem; }
   .hero__ornamento { width: 82%; }
   .hero__frase { font-size: 1.02rem; }
@@ -319,7 +319,8 @@
   }
 
   .hero__dentro-corao {
-    padding: 0 8% 4%;
+    padding: 0 6% 4%;
+    max-width: 84vw;
   }
 }
 
