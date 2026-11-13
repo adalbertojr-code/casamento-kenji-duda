@@ -59,12 +59,12 @@
 }
 
 .hero__olho {
-  font-size: clamp(.62rem, 1vw, .7rem);
+  font-size: clamp(.74rem, 1.25vw, .92rem);
   font-weight: 400;
-  letter-spacing: .3em;
+  letter-spacing: .24em;
   text-transform: uppercase;
   color: var(--dourado-fosco);
-  margin-bottom: clamp(4px, .8vw, 8px);
+  margin-bottom: clamp(6px, 1.1vw, 12px);
   animation: aparecer 1.2s var(--suave) .15s both;
 }
 
@@ -135,7 +135,7 @@
 .hero__nome {
   font-family: var(--script);
   font-weight: 400;
-  font-size: clamp(2.4rem, min(5.3vw, 8.2vh), 4.3rem);
+  font-size: clamp(2.4rem, min(4.8vw, 7.4vh), 4rem);
   line-height: 1.06;
   white-space: nowrap;
   color: var(--coral);
@@ -307,7 +307,7 @@
 
 @media (max-width: 520px) {
   /* 14vw dos dois nomes + "&" estoura a coluna; 11vw cabe com folga */
-  .hero__nome { font-size: clamp(2.1rem, 11vw, 3rem); }
+  .hero__nome { font-size: clamp(2.3rem, 12.4vw, 3.3rem); }
   .hero__e { font-size: 1.5rem; }
   .hero__ornamento { width: 82%; }
   .hero__frase { font-size: 1.02rem; }
