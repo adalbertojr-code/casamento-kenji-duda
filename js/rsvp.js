@@ -179,21 +179,28 @@
     const titulo = $('#formOkTitulo');
     const txt = $('#formOkTexto');
 
+    const nome = window.App.escapar(primeiroNome(dados.nome));
+    const data = window.App.dataDoCasamento ? window.App.dataDoCasamento() : '';
+
     if (dados.vai === 'nao') {
-      if (titulo) titulo.textContent = 'Sentiremos sua falta';
+      if (titulo) titulo.textContent = 'Vamos sentir sua falta';
       if (txt) {
-        txt.innerHTML = 'Obrigado por avisar, <b>' + window.App.escapar(primeiroNome(dados.nome)) +
-          '</b>. Vamos guardar você no coração nesse dia.';
+        txt.innerHTML = 'Obrigado por avisar, <b>' + nome + '</b>. ' +
+          'Seu lugar continua guardado no nosso coração' +
+          (data ? ', e no dia ' + data + ' você estará nas nossas orações.' : '.');
       }
     } else {
-      if (titulo) titulo.textContent = 'Presença confirmada!';
-      const quantos = dados.acompanhantes > 0
-        ? ' Com mais ' + dados.acompanhantes + (dados.acompanhantes === 1 ? ' pessoa' : ' pessoas') + ','
-        : '';
+      if (titulo) titulo.textContent = 'Que notícia boa!';
+      const quantos = dados.acompanhantes > 0;
+      const amigos = dados.acompanhantes === 1 ? 'uma pessoa especial' : dados.acompanhantes + ' pessoas especiais';
+
       if (txt) {
-        txt.innerHTML = 'Que alegria ter você com a gente, <b>' +
-          window.App.escapar(primeiroNome(dados.nome)) + '</b>!' + quantos +
-          ' Mal podemos esperar para celebrar esse dia ao seu lado.';
+        txt.innerHTML = '<b>' + nome + '</b>, você acabou de deixar esse dia ainda mais bonito.' +
+          (quantos
+            ? ' E que alegria saber que ' + amigos + ' vêm com você!'
+            : '') +
+          ' Já estamos contando os dias' + (data ? ' até ' + data : '') +
+          ' — e agora com você na conta.';
       }
     }
   }
@@ -206,6 +213,30 @@
      eventos
      ------------------------------------------------------------------ */
 
+  // a resposta guardada só vale se ainda existir no banco: os noivos
+  // podem ter apagado pelo painel, e aí o convidado precisa responder de novo
+  async function confirmarNoBanco(anterior) {
+    if (!nuvem || !anterior) return;
+
+    try {
+      const base = (cfg.firebaseUrl || '').replace(/\/+$/, '');
+      const resposta = await fetch(
+        base + '/rsvp/' + encodeURIComponent(convidado) + '.json',
+        { cache: 'no-store' }
+      );
+      if (!resposta.ok) return;
+
+      const atual = await resposta.json();
+      if (atual) return;
+
+      // foi apagado: limpa o cache local para a pessoa poder responder de novo
+      try { localStorage.removeItem(chaveResposta); } catch (e) { /* sem armazenamento */ }
+      form.classList.remove('respondido');
+      form.reset();
+      atualizarCampoAcompanhantes();
+    } catch (e) { /* sem rede: mantém o que estava na tela */ }
+  }
+
   function ligarFormulario() {
     if (!form) return;
 
@@ -214,6 +245,7 @@
     if (anterior) {
       preencher(anterior);
       mostrarSucesso(anterior);
+      confirmarNoBanco(anterior);
     }
 
     form.querySelectorAll('input[name="vai"]').forEach((radio) => {
