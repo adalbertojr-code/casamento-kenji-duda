@@ -10,7 +10,7 @@
     "rsvp": {
       ".read": "auth != null",
       "$pessoa": {
-        ".write": true,
+        ".write": "auth != null || newData.exists()",
         ".validate": "newData.hasChild('nome')"
       }
     }

@@ -184,6 +184,26 @@
   color: var(--tinta-suave);
 }
 
+.apagar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 1.16rem;
+  line-height: 1;
+  color: var(--tinta-suave);
+  transition: background .25s, color .25s;
+}
+
+.apagar:hover:not(:disabled) {
+  background: rgba(200, 140, 130, .18);
+  color: var(--coral-forte);
+}
+
+.apagar:disabled { opacity: .45; }
+
 .painel__vazio {
   padding: 46px 20px;
   text-align: center;

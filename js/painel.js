@@ -73,6 +73,8 @@
         '<td>' + esc(r.telefone || '—') + '</td>' +
         '<td class="tabela__recado">' + esc(r.recado || '—') + '</td>' +
         '<td>' + esc(quando) + '</td>' +
+        '<td><button class="apagar" type="button" data-apagar="' + esc(r.id) + '" ' +
+          'data-nome="' + esc(r.nome) + '" title="Apagar esta resposta">&times;</button></td>' +
         '</tr>';
     }).join('');
   }
@@ -109,6 +111,8 @@
         '<td class="tabela__nome">' + esc(item.nome) + '</td>' +
         '<td>' + esc(item.categoria) + '</td>' +
         '<td>' + esc(quando) + '</td>' +
+        '<td><button class="apagar" type="button" data-liberar="' + esc(id) + '" ' +
+          'data-nome="' + esc(item.nome) + '" title="Liberar este presente">&times;</button></td>' +
         '</tr>';
     }).join('');
   }
@@ -189,12 +193,60 @@
   }
 
   /* ------------------------------------------------------------------
+     apagar
+     ------------------------------------------------------------------ */
+
+  function ligarApagar() {
+    // um só ouvinte na tabela: as linhas são redesenhadas a cada carga
+    document.querySelector('#corpoRsvp').addEventListener('click', async (evento) => {
+      const botao = evento.target.closest('[data-apagar]');
+      if (!botao) return;
+
+      const nome = botao.dataset.nome || 'este convidado';
+      if (!confirm('Apagar a resposta de ' + nome + '? Isso não pode ser desfeito.')) return;
+
+      botao.disabled = true;
+      try {
+        await window.Rsvp.apagar(botao.dataset.apagar);
+        await carregar();
+        window.App.avisar('Resposta de ' + nome + ' apagada.');
+      } catch (erro) {
+        botao.disabled = false;
+        window.App.avisar('Não foi possível apagar: ' + erro.message);
+      }
+    });
+
+    document.querySelector('#corpoPresentes').addEventListener('click', async (evento) => {
+      const botao = evento.target.closest('[data-liberar]');
+      if (!botao) return;
+
+      const nome = botao.dataset.nome || 'este presente';
+      if (!confirm('Liberar "' + nome + '"? Ele volta para a lista e pode ser escolhido de novo.')) return;
+
+      botao.disabled = true;
+      try {
+        const base = (CONFIG.infra.firebaseUrl || '').replace(/\/+$/, '');
+        const resposta = await fetch(base + '/reservas/' + encodeURIComponent(botao.dataset.liberar) + '.json', {
+          method: 'DELETE'
+        });
+        if (!resposta.ok) throw new Error('o banco respondeu ' + resposta.status);
+        await carregar();
+        window.App.avisar('"' + nome + '" voltou para a lista.');
+      } catch (erro) {
+        botao.disabled = false;
+        window.App.avisar('Não foi possível liberar: ' + erro.message);
+      }
+    });
+  }
+
+  /* ------------------------------------------------------------------
      início
      ------------------------------------------------------------------ */
 
   function iniciar() {
     ligarAbas();
     ligarLogin();
+    ligarApagar();
 
     const botao = $('#btnAtualizar');
     if (botao) botao.addEventListener('click', carregar);
