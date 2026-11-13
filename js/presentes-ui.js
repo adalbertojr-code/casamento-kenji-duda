@@ -253,7 +253,10 @@
 
     botao.setAttribute('aria-busy', 'true');
 
-    // roda a roleta por um instante, para dar emoção
+    // escolhe AGORA o que vai sair; a roleta só gira e pousa nesse item,
+    // senão o último número que a pessoa vê não é o que ela ganhou
+    const candidatoInicial = livres[Math.floor(Math.random() * livres.length)];
+
     caixa.classList.remove('tem-resultado');
     caixa.innerHTML =
       '<span class="sorteio__rotulo">Sorteando…</span>' +
@@ -261,17 +264,19 @@
     caixa.classList.add('tem-resultado', 'sorteio--rolando');
 
     const atual = $('#sorteioAtual');
-    const inicio = Date.now();
-    const duracao = 1500;
 
-    const roleta = setInterval(() => {
-      if (!atual) return;
-      const aleatorio = livres[Math.floor(Math.random() * livres.length)];
-      atual.textContent = aleatorio.nome;
-    }, 90);
+    // desacelera perto do fim, como uma roleta de verdade
+    const soltar = (ms) => new Promise((r) => setTimeout(r, ms));
+    const giros = [70, 70, 70, 70, 80, 80, 90, 100, 110, 125, 145, 170, 200, 240, 290];
 
-    await new Promise((r) => setTimeout(r, duracao));
-    clearInterval(roleta);
+    for (let i = 0; i < giros.length; i++) {
+      if (atual) {
+        atual.textContent = (i === giros.length - 1)
+          ? candidatoInicial.nome
+          : livres[Math.floor(Math.random() * livres.length)].nome;
+      }
+      await soltar(giros[i]);
+    }
 
     // tenta reservar; se alguém tomar no meio do caminho, tenta outro livre
     let escolhido = null;
@@ -292,7 +297,11 @@
         return;
       }
 
-      const candidato = livreAgora[Math.floor(Math.random() * livreAgora.length)];
+      // na primeira tentativa, respeita o item em que a roleta pousou
+      const aindaLivre = livreAgora.some((i) => i.id === candidatoInicial.id);
+      const candidato = (tentativas === 1 && aindaLivre)
+        ? candidatoInicial
+        : livreAgora[Math.floor(Math.random() * livreAgora.length)];
 
       try {
         reservas = await window.Presentes.reservar(candidato.id);
