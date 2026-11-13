@@ -121,19 +121,28 @@
     const botao = $('#btnAtualizar');
     if (botao) botao.setAttribute('aria-busy', 'true');
 
-    try {
-      const [confirmacoes, reservas] = await Promise.all([
-        window.Rsvp.listar(),
-        window.Presentes.listar()
-      ]);
+    // as duas listas carregam separadas: se a de confirmações falhar por
+    // falta de login, os presentes ainda aparecem
+    const [confirmacoes, reservas] = await Promise.allSettled([
+      window.Rsvp.listar(),
+      window.Presentes.listar()
+    ]);
 
-      montarRsvp(confirmacoes || []);
-      montarPresentes(reservas || {});
-    } catch (erro) {
-      window.App.avisar('Não foi possível carregar os dados: ' + erro.message);
-    } finally {
-      if (botao) botao.removeAttribute('aria-busy');
+    if (confirmacoes.status === 'fulfilled') {
+      montarRsvp(confirmacoes.value || []);
+    } else {
+      montarRsvp([]);
+      window.App.avisar('Confirmações: ' + confirmacoes.reason.message);
     }
+
+    if (reservas.status === 'fulfilled') {
+      montarPresentes(reservas.value || {});
+    } else {
+      montarPresentes({});
+      window.App.avisar('Presentes: ' + reservas.reason.message);
+    }
+
+    if (botao) botao.removeAttribute('aria-busy');
   }
 
   /* ------------------------------------------------------------------
