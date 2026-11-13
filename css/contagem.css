@@ -245,8 +245,13 @@
 }
 
 @media (max-width: 480px) {
-  .contagem__deck { gap: 5px; }
-  .cartao-tempo { border-radius: 12px; padding: 13px 3px; }
+  .contagem__deck { gap: 4px; }
+  .cartao-tempo { border-radius: 12px; padding: 12px 2px; }
   .cartao-tempo__icone { display: none; }
-  .contagem__entre { width: 7px; height: 7px; }
+  .contagem__entre { width: 6px; height: 6px; }
+
+  /* quatro cartoes em 375px deixam ~78px cada; 32px de numero estourava
+     a caixa e o valor saia pela direita */
+  .cartao-tempo__num { font-size: clamp(1.35rem, 6vw, 1.75rem); }
+  .cartao-tempo__rot { font-size: .5rem; letter-spacing: .12em; }
 }
