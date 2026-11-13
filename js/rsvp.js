@@ -301,5 +301,22 @@
     iniciar();
   }
 
-  window.Rsvp = { listar, nuvem };
+  // só o painel logado usa: apaga a resposta de um convidado
+  async function apagar(id) {
+    if (!nuvem) throw new Error('o banco não está ligado');
+
+    const token = window.Auth ? await window.Auth.token() : '';
+    if (!token) throw new Error('entre com a conta dos noivos para apagar');
+
+    const base = (cfg.firebaseUrl || '').replace(/\/+$/, '');
+    const endereco = base + '/rsvp/' + encodeURIComponent(id) + '.json?auth=' + encodeURIComponent(token);
+
+    const resposta = await fetch(endereco, { method: 'DELETE' });
+    if (resposta.status === 401 || resposta.status === 403) {
+      throw new Error('sem permissão para apagar');
+    }
+    if (!resposta.ok) throw new Error('não foi possível apagar (' + resposta.status + ')');
+  }
+
+  window.Rsvp = { listar, apagar, nuvem };
 })();
