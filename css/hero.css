@@ -101,10 +101,9 @@
   width: min(122%, 430px);
   max-width: 86vw;
   aspect-ratio: 200 / 184;
-  /* o coração afina para baixo: com o texto centrado ele ficava na parte
-     estreita e os nomes passavam do desenho. O padding de baixo sobe o
-     bloco para a parte larga, como na referência */
-  padding: 0 9% 24%;
+  /* o bloco fica no meio vertical do coração: 22% de respiro em cima e
+     embaixo, medido. Mais que isso deixava um vazio grande na ponta */
+  padding: 0 9% 4%;
 }
 
 .hero__coracao-fundo {
@@ -320,7 +319,7 @@
   }
 
   .hero__dentro-corao {
-    padding: 0 12% 13%;
+    padding: 0 8% 4%;
   }
 }
 
