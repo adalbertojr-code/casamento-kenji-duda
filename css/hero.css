@@ -104,10 +104,11 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) rotate(-3deg);
-  /* o traço do desenho fica dentro da viewBox, então a caixa precisa ser
-     bem maior que o texto para as bordas não encostarem nele */
-  height: 128%;
-  width: min(128%, 86vw);
+  /* largura manda e a altura acompanha pela proporção do desenho: definir
+     as duas em % de caixas diferentes esticava o coração (1,93 em vez de 1,09) */
+  width: 84vw;
+  height: auto;
+  max-width: 84vw;
   color: rgba(206, 129, 121, .26);
   pointer-events: none;
   z-index: 0;
@@ -320,7 +321,7 @@
 
   /* espaço para a ponta do coração, que desce abaixo da caixa do texto */
   .hero__data {
-    margin-top: 26px;
+    margin-top: 78px;
   }
 }
 
