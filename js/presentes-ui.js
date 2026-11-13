@@ -253,6 +253,10 @@
 
     botao.setAttribute('aria-busy', 'true');
 
+    // some com a confirmação do sorteio anterior: ela ficava na tela
+    // enquanto o novo sorteio já rodava, mostrando dois nomes diferentes
+    esconderConfirmacao();
+
     // escolhe AGORA o que vai sair; a roleta só gira e pousa nesse item,
     // senão o último número que a pessoa vê não é o que ela ganhou
     const candidatoInicial = livres[Math.floor(Math.random() * livres.length)];
