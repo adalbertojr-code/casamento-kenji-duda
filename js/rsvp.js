@@ -91,12 +91,12 @@
       return local ? [local] : [];
     }
 
-    // a lista completa só abre para a conta dos noivos; o token vai junto
+    // a lista completa só abre para a conta dos noivos
+    // o Realtime Database recebe o token pelo parâmetro ?auth=, não pelo cabeçalho
     const token = window.Auth ? await window.Auth.token() : '';
-    const resposta = await fetch(urlRespostas(), {
-      cache: 'no-store',
-      headers: token ? { Authorization: 'Bearer ' + token } : {}
-    });
+    const endereco = urlRespostas() + (token ? '?auth=' + encodeURIComponent(token) : '');
+
+    const resposta = await fetch(endereco, { cache: 'no-store' });
 
     if (resposta.status === 401 || resposta.status === 403) {
       throw new Error('entre com a conta dos noivos para ver as confirmações');
