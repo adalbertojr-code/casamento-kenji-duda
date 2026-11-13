@@ -186,21 +186,26 @@
       if (titulo) titulo.textContent = 'Vamos sentir sua falta';
       if (txt) {
         txt.innerHTML = 'Obrigado por avisar, <b>' + nome + '</b>. ' +
-          'Seu lugar continua guardado no nosso coração' +
-          (data ? ', e no dia ' + data + ' você estará nas nossas orações.' : '.');
+          'Sua resposta está registrada, e seu lugar continua guardado no nosso coração' +
+          (data ? '<br>No dia ' + data + ' você estará nas nossas orações.' : '.');
       }
     } else {
-      if (titulo) titulo.textContent = 'Que notícia boa!';
-      const quantos = dados.acompanhantes > 0;
-      const amigos = dados.acompanhantes === 1 ? 'uma pessoa especial' : dados.acompanhantes + ' pessoas especiais';
+      if (titulo) titulo.textContent = 'Que alegria ter vocês com a gente!';
+
+      const amigos = Number(dados.acompanhantes) || 0;
+      let registro;
+      if (amigos === 0) {
+        registro = 'sua confirmação está registrada.';
+      } else if (amigos === 1) {
+        registro = 'sua confirmação está registrada para você e mais 1 pessoa.';
+      } else {
+        registro = 'sua confirmação está registrada para você e mais ' + amigos + ' pessoas.';
+      }
 
       if (txt) {
-        txt.innerHTML = '<b>' + nome + '</b>, você acabou de deixar esse dia ainda mais bonito.' +
-          (quantos
-            ? ' E que alegria saber que ' + amigos + ' vêm com você!'
-            : '') +
-          ' Já estamos contando os dias' + (data ? ' até ' + data : '') +
-          ' — e agora com você na conta.';
+        txt.innerHTML = '<b>' + nome + '</b>, ' + registro +
+          ' Estamos muito felizes por poder compartilhar esse dia com vocês.' +
+          (data ? '<br>Até ' + data + '!' : '');
       }
     }
   }
