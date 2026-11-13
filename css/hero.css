@@ -104,9 +104,10 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) rotate(-3deg);
-  /* um pouco maior que a caixa para as bordas do desenho passarem dela */
-  height: 118%;
-  width: 118%;
+  /* o traço do desenho fica dentro da viewBox, então a caixa precisa ser
+     bem maior que o texto para as bordas não encostarem nele */
+  height: 128%;
+  width: min(128%, 86vw);
   color: rgba(206, 129, 121, .26);
   pointer-events: none;
   z-index: 0;
@@ -314,7 +315,12 @@
   }
 
   .hero__dentro-corao {
-    padding: 20px clamp(14px, 4vw, 24px);
+    padding: 22px clamp(26px, 8vw, 40px);
+  }
+
+  /* espaço para a ponta do coração, que desce abaixo da caixa do texto */
+  .hero__data {
+    margin-top: 26px;
   }
 }
 
