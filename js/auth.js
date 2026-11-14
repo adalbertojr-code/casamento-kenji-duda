@@ -1,11 +1,6 @@
 /* ===================================================================
-   LOGIN DOS NOIVOS — Firebase Authentication, REST.
-
-   A leitura de /rsvp no banco só é liberada para quem tem a conta dos
-   noivos. O token volta do login e vai em cada requisição; as regras do
-   Firebase conferem esse token no servidor. Sem token, o banco recusa.
-
-   Nenhuma senha fica no site: só o e-mail aparece em config.js.
+   LOGIN DO PAINEL — Auth REST do Firebase.
+   A senha nunca aparece no site, só o e-mail; quem confere é o servidor.
    =================================================================== */
 
 (function () {

@@ -1,12 +1,7 @@
 /* ===================================================================
-   CONFIRMAÇÃO DE PRESENÇA (RSVP)
-
-   "local"    -> a resposta fica no aparelho do convidado (para testar)
-   "firebase" -> a resposta vai para o banco e aparece no painel dos
-                 noivos (painel.html)
-
-   Também guarda no aparelho qual resposta já foi enviada, para que a
-   pessoa possa editar depois, em vez de confirmar duas vezes.
+   RSVP — confirmação de presença.
+   Guarda no aparelho qual resposta já foi enviada, para a pessoa poder
+   editar em vez de confirmar duas vezes.
    =================================================================== */
 
 (function () {

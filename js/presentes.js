@@ -1,16 +1,8 @@
 /* ===================================================================
    PRESENTES — reserva de itens.
-
-   Dois modos (configurar em CONFIG.infra.modo):
-
-   "local"    -> guarda no aparelho de quem reservou. Serve para testar.
-   "firebase" -> lista compartilhada entre todos os convidados, com
-                 proteção contra duas pessoas pegarem o mesmo item.
-
-   No modo firebase, a proteção usa transação por ETag (If-Match):
-   se outra pessoa reservar no mesmo instante, o servidor recusa e o
-   site tenta de novo. Sem isso, um PUT simples sobrescreveria a
-   reserva do outro e as duas pessoas achariam que reservaram.
+   No modo firebase a reserva usa If-Match com o ETag da leitura: se
+   outra pessoa reservar no meio do caminho o servidor recusa e a gente
+   tenta de novo. Um PUT seco sobrescreveria a reserva dela.
    =================================================================== */
 
 (function () {
