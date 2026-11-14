@@ -8,7 +8,7 @@
   min-height: 100svh;
   display: flex;
   align-items: center;
-  padding: clamp(104px, 13vh, 140px) 0 clamp(56px, 8vh, 88px);
+  padding: clamp(92px, 11vh, 122px) 0 clamp(40px, 5vh, 60px);
   background:
     radial-gradient(ellipse 86% 70% at 24% 26%, #FFFEFC 0%, #FEFAF6 48%, #FBF1EC 100%);
   overflow: hidden;
@@ -87,7 +87,7 @@
   display: grid;
   justify-items: center;
   /* o respiro acompanha o coração, que é dimensionado pelos nomes */
-  padding: clamp(30px, 7vw, 54px) clamp(20px, 4vw, 42px) clamp(34px, 7.5vw, 52px);
+  padding: clamp(18px, 4vw, 34px) clamp(20px, 4vw, 42px) clamp(20px, 4.4vw, 32px);
 }
 
 /* a caixa tem a MESMA proporção do desenho do coração. Assim o desenho
@@ -98,7 +98,7 @@
   place-content: center;
   justify-items: center;
   gap: inherit;
-  width: min(118%, 430px);
+  width: min(104%, 380px);
   max-width: 90vw;
   aspect-ratio: 200 / 184;
   /* o bloco fica no meio vertical do coração: 22% de respiro em cima e
@@ -136,7 +136,7 @@
   font-weight: 400;
   /* os nomes passam um pouco do traço do coração nas laterais, como na arte
      de referência dos noivos */
-  font-size: clamp(2.6rem, min(5.7vw, 8.6vh), 4.7rem);
+  font-size: clamp(2.6rem, 4.7vw, 4.2rem);
   line-height: 1.06;
   white-space: nowrap;
   color: var(--coral);
@@ -199,7 +199,7 @@
 }
 
 .hero__frase {
-  margin-top: clamp(30px, 4vw, 46px);
+  margin-top: clamp(18px, 2.4vw, 30px);
   margin-bottom: 0;
   /* 52ch pode ser mais largo que a coluna no celular e estourar a grade */
   width: 100%;
