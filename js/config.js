@@ -116,13 +116,8 @@ const CONFIG = {
   },
 
   /* ---------------- painel dos noivos ----------------
-     O painel entra com a conta dos noivos (e-mail e senha) criada no
-     Firebase, em Authentication > Users. Nada de senha aqui: este
-     arquivo é público e qualquer visitante consegue ler.
-     A senha só é exigida no servidor, pelas regras do banco. */
-  painel: {
-    email: "painel@kenjiduda.com"
-  },
+     A conta fica no Firebase (Authentication > Users). Nem e-mail nem
+     senha ficam aqui: este arquivo é público. */
 
   /* ---------------- presentes ---------------- */
   presentes: [
