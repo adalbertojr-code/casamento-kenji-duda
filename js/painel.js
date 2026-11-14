@@ -184,7 +184,10 @@
         await window.Auth.entrar(email, senha);
         entrar();
       } catch (falha) {
-        erro.textContent = 'E-mail ou senha incorretos.';
+        const espera = String(falha.message || '').match(/^espera:(\d+)$/);
+        erro.textContent = espera
+          ? 'Muitas tentativas. Tente de novo em ' + espera[1] + ' minutos.'
+          : 'E-mail ou senha incorretos.';
         erro.parentNode.classList.add('campo--erro');
       } finally {
         botao.removeAttribute('aria-busy');
