@@ -98,7 +98,7 @@
   place-content: center;
   justify-items: center;
   gap: inherit;
-  width: min(138%, 490px);
+  width: min(118%, 430px);
   max-width: 90vw;
   aspect-ratio: 200 / 184;
   /* o bloco fica no meio vertical do coração: 22% de respiro em cima e
@@ -136,7 +136,7 @@
   font-weight: 400;
   /* os nomes passam um pouco do traço do coração nas laterais, como na arte
      de referência dos noivos */
-  font-size: clamp(2.6rem, min(6.6vw, 10vh), 5.4rem);
+  font-size: clamp(2.6rem, min(5.7vw, 8.6vh), 4.7rem);
   line-height: 1.06;
   white-space: nowrap;
   color: var(--coral);
