@@ -4,14 +4,14 @@
       ".read": true,
       ".write": true,
       "$item": {
-        ".validate": "newData.hasChild('d')"
+        ".validate": "newData.hasChild('d') && newData.child('d').isString() && newData.child('d').val().length >= 6"
       }
     },
     "rsvp": {
       ".read": "auth != null",
       "$pessoa": {
         ".write": "auth != null || newData.exists()",
-        ".validate": "newData.hasChild('nome')"
+        ".validate": "newData.hasChildren(['nome','vai']) && newData.child('nome').isString() && newData.child('nome').val().length >= 2 && newData.child('nome').val().length <= 80 && newData.child('vai').val().matches(/^(sim|nao)$/)"
       }
     }
   }
