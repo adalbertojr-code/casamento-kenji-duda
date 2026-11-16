@@ -98,8 +98,8 @@ const CONFIG = {
   /* ---------------- música ---------------- */
   musica: {
     arquivo: "assets/musica/musica.mp3",
-    titulo: "Sorriso Resplandecente",
-    artista: "Cammyli Aguiar — violino",
+    titulo: "Ordinary",
+    artista: "Alex Warren — piano e cello",
     volume: 0.32
   },
 
