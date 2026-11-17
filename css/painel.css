@@ -4,98 +4,122 @@
 
 .painel {
   min-height: 100svh;
-  padding: clamp(28px, 5vw, 52px) clamp(16px, 4vw, 40px);
+  padding: clamp(40px, 6vw, 76px) clamp(18px, 4vw, 48px) clamp(56px, 7vw, 90px);
   background:
-    radial-gradient(ellipse 80% 50% at 50% 0%, #FDF6F2, transparent 70%),
+    radial-gradient(ellipse 70% 44% at 50% 0%, #FDF6F2, transparent 72%),
     var(--creme-fundo);
 }
 
 .painel__wrap {
-  max-width: 1120px;
+  max-width: 1180px;
   margin-inline: auto;
 }
 
 .painel__marca {
-  width: min(52vw, 220px);
-  margin: 0 auto clamp(16px, 3vw, 24px);
+  width: min(46vw, 190px);
+  margin: 0 auto clamp(22px, 3.4vw, 34px);
+  display: block;
 }
 
 .painel__titulo {
   text-align: center;
   font-family: var(--serif);
-  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-size: clamp(2.1rem, 5.2vw, 3.1rem);
   font-weight: 300;
+  line-height: 1.1;
+  letter-spacing: .01em;
   color: var(--tinta);
 }
 
 .painel__sub {
   text-align: center;
-  font-size: .92rem;
+  font-family: var(--sans);
+  font-size: clamp(.86rem, 1.5vw, .98rem);
+  font-weight: 300;
+  letter-spacing: .06em;
   color: var(--tinta-suave);
-  margin-top: 6px;
+  margin-top: 12px;
+}
+
+/* fio dourado sob o cabeçalho */
+.painel__sub::after {
+  content: '';
+  display: block;
+  width: 54px;
+  height: 1px;
+  margin: 22px auto 0;
+  background: linear-gradient(90deg, transparent, var(--dourado-claro), transparent);
 }
 
 /* ---- login ---- */
 
 .painel__login {
-  max-width: 380px;
-  margin: clamp(26px, 4vw, 40px) auto 0;
+  max-width: 400px;
+  margin: clamp(34px, 5vw, 52px) auto 0;
 }
 
 /* ---- números ---- */
 
 .painel__numeros {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 12px;
-  margin: clamp(24px, 4vw, 34px) 0 22px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: clamp(12px, 1.6vw, 18px);
+  margin: clamp(34px, 5vw, 52px) 0 clamp(28px, 4vw, 40px);
 }
 
 .numero {
-  padding: 18px 16px;
+  padding: clamp(22px, 2.6vw, 30px) 18px;
   background: #fff;
-  border: 1px solid rgba(183, 147, 115, .22);
-  border-radius: 4px;
+  border: 1px solid rgba(183, 147, 115, .2);
+  border-radius: 3px;
   text-align: center;
   box-shadow: var(--sombra-sm);
+  transition: box-shadow .4s var(--suave), transform .4s var(--suave);
+}
+
+.numero:hover {
+  box-shadow: var(--sombra);
+  transform: translateY(-2px);
 }
 
 .numero__valor {
   display: block;
   font-family: var(--serif);
-  font-size: clamp(1.65rem, 4.4vw, 2.15rem);
+  font-size: clamp(2.4rem, 5.4vw, 3.4rem);
   font-weight: 300;
   line-height: 1;
-  color: var(--coral);
+  color: var(--coral-forte);
   font-variant-numeric: tabular-nums;
 }
 
 .numero__rot {
   display: block;
-  margin-top: 6px;
-  font-size: .72rem;
+  margin-top: 12px;
+  font-family: var(--sans);
+  font-size: clamp(.66rem, 1.1vw, .74rem);
   font-weight: 400;
-  letter-spacing: .14em;
+  letter-spacing: .18em;
   text-transform: uppercase;
-  color: var(--tinta-suave);
+  color: var(--dourado-fosco);
 }
 
 /* ---- abas ---- */
 
 .painel__abas {
   display: flex;
-  gap: 6px;
+  gap: 8px;
   justify-content: center;
-  margin-bottom: 18px;
+  margin-bottom: clamp(22px, 3vw, 30px);
   flex-wrap: wrap;
 }
 
 .aba {
-  padding: 10px 20px;
+  padding: 12px 26px;
   border-radius: 99px;
-  font-size: .78rem;
+  font-family: var(--sans);
+  font-size: clamp(.72rem, 1.2vw, .8rem);
   font-weight: 400;
-  letter-spacing: .1em;
+  letter-spacing: .14em;
   text-transform: uppercase;
   color: var(--tinta-media);
   border: 1px solid transparent;
@@ -117,8 +141,8 @@
 
 .tabela-moldura {
   background: #fff;
-  border: 1px solid rgba(183, 147, 115, .22);
-  border-radius: 4px;
+  border: 1px solid rgba(183, 147, 115, .2);
+  border-radius: 3px;
   overflow: hidden;
   box-shadow: var(--sombra-sm);
 }
@@ -128,34 +152,41 @@
 .tabela {
   width: 100%;
   border-collapse: collapse;
-  font-size: .94rem;
+  font-family: var(--sans);
+  font-size: clamp(.9rem, 1.3vw, 1rem);
+  font-weight: 300;
 }
 
 .tabela th {
   text-align: left;
-  padding: 12px 14px;
-  font-size: .72rem;
-  font-weight: 400;
-  letter-spacing: .12em;
+  padding: 16px 18px;
+  font-family: var(--sans);
+  font-size: clamp(.64rem, 1vw, .7rem);
+  font-weight: 500;
+  letter-spacing: .16em;
   text-transform: uppercase;
   color: var(--dourado-fosco);
   background: #FCF8F5;
-  border-bottom: 1px solid rgba(183, 147, 115, .2);
+  border-bottom: 1px solid rgba(183, 147, 115, .18);
   white-space: nowrap;
 }
 
 .tabela td {
-  padding: 12px 14px;
-  border-bottom: 1px solid rgba(183, 147, 115, .12);
+  padding: 16px 18px;
+  border-bottom: 1px solid rgba(183, 147, 115, .1);
   color: var(--tinta-media);
-  vertical-align: top;
+  vertical-align: middle;
+  line-height: 1.5;
 }
 
 .tabela tr:last-child td { border-bottom: 0; }
 
+.tabela tbody tr { transition: background .25s; }
 .tabela tbody tr:hover td { background: #FDFAF8; }
 
 .tabela__nome {
+  font-family: var(--serif);
+  font-size: 1.12em;
   font-weight: 400;
   color: var(--tinta);
   white-space: nowrap;
@@ -165,11 +196,12 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 99px;
-  font-size: .74rem;
+  font-family: var(--sans);
+  font-size: clamp(.64rem, 1vw, .7rem);
   font-weight: 400;
-  letter-spacing: .06em;
+  letter-spacing: .1em;
   text-transform: uppercase;
   white-space: nowrap;
 }
@@ -178,20 +210,21 @@
 .selo--nao { background: rgba(200, 140, 130, .16); color: #A2605A; }
 
 .tabela__recado {
-  max-width: 320px;
-  font-size: .88rem;
-  line-height: 1.6;
+  max-width: 340px;
+  font-size: .94em;
+  line-height: 1.65;
   color: var(--tinta-suave);
+  font-style: italic;
 }
 
 .apagar {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  font-size: 1.16rem;
+  font-size: 1.2rem;
   line-height: 1;
   color: var(--tinta-suave);
   transition: background .25s, color .25s;
@@ -205,10 +238,13 @@
 .apagar:disabled { opacity: .45; }
 
 .painel__vazio {
-  padding: 46px 20px;
+  padding: clamp(52px, 7vw, 76px) 20px;
   text-align: center;
+  font-family: var(--serif);
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  font-style: italic;
+  font-weight: 300;
   color: var(--tinta-suave);
-  font-size: .88rem;
 }
 
 /* ---- barra de ferramentas ---- */
@@ -217,22 +253,28 @@
   display: flex;
   gap: 10px;
   justify-content: flex-end;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
   flex-wrap: wrap;
 }
 
-.painel__ferramentas .botao { padding: 11px 22px; font-size: .76rem; }
+.painel__ferramentas .botao {
+  padding: 12px 26px;
+  font-size: clamp(.7rem, 1.1vw, .78rem);
+  letter-spacing: .12em;
+}
 
 /* ---- ligar banco ---- */
 
 .aviso-banco {
-  margin-top: 20px;
-  padding: 20px 22px;
-  border-radius: 4px;
+  margin-top: 24px;
+  padding: 22px 24px;
+  border-radius: 3px;
   background: #FCF6F2;
   border: 1px solid var(--linha-forte);
-  font-size: .84rem;
-  line-height: 1.7;
+  font-family: var(--sans);
+  font-size: .88rem;
+  font-weight: 300;
+  line-height: 1.75;
   color: var(--tinta-media);
 }
 
@@ -248,6 +290,7 @@
 }
 
 @media (max-width: 640px) {
-  .tabela th, .tabela td { padding: 10px; }
-  .tabela__recado { max-width: 180px; }
+  .tabela th, .tabela td { padding: 12px 12px; }
+  .tabela__recado { max-width: 200px; }
+  .painel__ferramentas { justify-content: center; }
 }
