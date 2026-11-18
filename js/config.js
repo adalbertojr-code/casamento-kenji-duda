@@ -121,15 +121,9 @@ const CONFIG = {
 
   /* ---------------- presentes ---------------- */
   presentes: [
-    { categoria: "Utensílios", itens: [
-      "Colher de pau", "Espátulas", "Concha", "Escumadeira", "Pegador de massa",
-      "Fouet", "Abridor de latas", "Saca-rolhas", "Descascador de legumes",
-      "Ralador", "Peneira", "Funil", "Tesoura de cozinha", "Tábua de corte"
-    ]},
-
     { categoria: "Louças", itens: [
-      "Pratos rasos", "Pratos fundos", "Pratos de sobremesa", "Copos", "Xícaras",
-      "Canecas", "Talheres", "Jogo de sobremesa", "Tigelas"
+      "Pratos rasos", "Pratos fundos", "Pratos de sobremesa", "Talheres",
+      "Jogo de sobremesa", "Xícaras", "Canecas"
     ]},
 
     { categoria: "Panelas e formas", itens: [
@@ -138,40 +132,28 @@ const CONFIG = {
     ]},
 
     { categoria: "Organização", itens: [
-      "Potes com tampa", "Potes para mantimentos", "Porta-temperos",
-      "Escorredor de louça", "Escorredor de macarrão", "Lixeira de cozinha",
-      "Pano de prato", "Luvas térmicas"
+      "Potes de mantimentos", "Porta temperos"
     ]},
 
     { categoria: "Eletrodomésticos", itens: [
-      "Liquidificador", "Batedeira", "Air fryer", "Sanduicheira", "Mixer"
-    ]},
-
-    { categoria: "Para preparar receitas", itens: [
-      "Jarra medidora", "Pincel culinário", "Forma de gelo"
+      "Liquidificador", "Mixer", "Jarra medidora"
     ]},
 
     { categoria: "Quarto", itens: [
       "Jogo de cama", "Lençóis", "Fronhas", "Travesseiros", "Cobertor",
-      "Edredom", "Protetor de colchão", "Cabides", "Cortina — quarto"
+      "Edredom", "Protetor de colchão", "Cabides"
     ]},
 
     { categoria: "Banheiro", itens: [
-      "Jogo de toalhas", "Toalhas de banho", "Toalhas de rosto",
-      "Tapete de banheiro", "Lixeira", "Porta-sabonete", "Porta-escova"
-    ]},
-
-    { categoria: "Limpeza", itens: [
-      "Vassoura", "Rodo", "Pá", "Balde", "Mop", "Panos de chão",
-      "Panos de limpeza", "Escova para banheiro"
+      "Jogo de toalhas", "Toalhas de rosto", "Tapete de banheiro"
     ]},
 
     { categoria: "Sala", itens: [
-      "Tapete", "Cortina — sala", "Almofadas", "Manta para sofá"
+      "Manta de sofá", "Tapete de cozinha"
     ]},
 
-    { categoria: "Lavanderia", itens: [
-      "Ferro de passar", "Cesto para roupas", "Varal de chão", "Balde para lavanderia"
+    { categoria: "Limpeza e lavanderia", itens: [
+      "Mop", "Ferro de passar", "Cesto de roupas"
     ]}
   ]
 };
