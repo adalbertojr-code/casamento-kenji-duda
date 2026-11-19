@@ -39,17 +39,16 @@ const CONFIG = {
 
   /* ---------------- informações gerais ---------------- */
   traje: "Traje social modesto",
-  trajeNota: "Pedimos roupa social modesta, que não exponha muitas partes do corpo. O mais importante é a sua presença.",
+  trajeNota: "O mais importante é a sua presença.",
 
-  /* os quatro cartões de traje.
-     reserva = a cor que fica guardada para aquele papel */
+  /* as orientações de traje, em linhas curtas (estilo cartilha do convite) */
   trajes: [
     {
       chave: 'padrinhos',
       titulo: 'Padrinhos',
       icone: 'i-terno',
       texto: 'Terno preto, camisa branca e gravata rosa bebê.',
-      reserva: 'Gravata rosa bebê, e tons similares, é exclusiva dos padrinhos.',
+      reserva: 'A gravata rosa bebê é exclusiva dos padrinhos.',
       cor: '#E9BCB6'
     },
     {
@@ -57,7 +56,7 @@ const CONFIG = {
       titulo: 'Madrinhas',
       icone: 'i-vestido',
       texto: 'Vestido rosa bebê.',
-      reserva: 'Vestido rosa bebê, e tons similares, é exclusivo das madrinhas.',
+      reserva: 'O rosa bebê é exclusivo das madrinhas.',
       cor: '#E9BCB6'
     },
     {
@@ -65,15 +64,15 @@ const CONFIG = {
       titulo: 'Noiva',
       icone: 'i-vestido-noiva',
       texto: 'A noiva vai de branco.',
-      reserva: 'Branco, e tons similares, é reservado para a noiva.',
+      reserva: 'Branco é reservado para a noiva.',
       cor: '#FFFFFF'
     },
     {
       chave: 'convidados',
       titulo: 'Convidados',
       icone: 'i-convidados',
-      texto: 'Roupa social modesta, que não mostre muitas partes do corpo.',
-      reserva: 'Sem gravata rosa, sem vestido rosa e sem branco, nem em tons similares.',
+      texto: 'Roupa social modesta, sem muitas partes expostas.',
+      reserva: 'Sem rosa bebê e sem branco, nem em tons similares.',
       cor: null
     }
   ],
