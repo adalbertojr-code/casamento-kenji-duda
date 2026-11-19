@@ -185,15 +185,8 @@
 
     caixa.innerHTML = (CONFIG.trajes || []).map((p) =>
       '<article class="papel papel--' + escapar(p.chave) + '">' +
-        '<svg class="papel__icone" aria-hidden="true"><use href="#' + escapar(p.icone) + '"/></svg>' +
-        '<div class="papel__corpo">' +
-          '<h4 class="papel__titulo">' + escapar(p.titulo) + '</h4>' +
-          '<p class="papel__texto">' + escapar(p.texto) + '</p>' +
-        '</div>' +
-        '<p class="papel__reserva">' +
-          (p.cor ? '<span class="papel__amostra" style="--amostra:' + escapar(p.cor) + '"></span>' : '') +
-          escapar(p.reserva) +
-        '</p>' +
+        '<img class="papel__arte" src="' + escapar(p.img) + '" alt="" aria-hidden="true" loading="lazy" decoding="async">' +
+        '<p class="papel__texto">' + escapar(p.texto) + '</p>' +
       '</article>'
     ).join('');
   }

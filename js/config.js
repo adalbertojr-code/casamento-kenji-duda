@@ -41,39 +41,57 @@ const CONFIG = {
   traje: "Traje social modesto",
   trajeNota: "O mais importante é a sua presença.",
 
-  /* as orientações de traje, em linhas curtas (estilo cartilha do convite) */
+  /* as orientações aos convidados, em duas colunas (como na cartilha) */
   trajes: [
     {
-      chave: 'padrinhos',
-      titulo: 'Padrinhos',
-      icone: 'i-terno',
-      texto: 'Terno preto, camisa branca e gravata rosa bebê.',
-      reserva: 'A gravata rosa bebê é exclusiva dos padrinhos.',
-      cor: '#E9BCB6'
+      chave: 'presenca',
+      img: 'assets/arte/cartilha/presenca.webp',
+      texto: 'Confirme sua presença'
     },
     {
-      chave: 'madrinhas',
-      titulo: 'Madrinhas',
-      icone: 'i-vestido',
-      texto: 'Vestido rosa bebê.',
-      reserva: 'O rosa bebê é exclusivo das madrinhas.',
-      cor: '#E9BCB6'
+      chave: 'silencio',
+      img: 'assets/arte/cartilha/silencio.webp',
+      texto: 'Deixe seu celular no silencioso'
     },
     {
-      chave: 'noiva',
-      titulo: 'Noiva',
-      icone: 'i-vestido-noiva',
-      texto: 'A noiva vai de branco.',
-      reserva: 'Branco é reservado para a noiva.',
-      cor: '#FFFFFF'
+      chave: 'convite',
+      img: 'assets/arte/cartilha/convite.webp',
+      texto: 'Não convide outras pessoas'
     },
     {
-      chave: 'convidados',
-      titulo: 'Convidados',
-      icone: 'i-convidados',
-      texto: 'Roupa social modesta, sem muitas partes expostas.',
-      reserva: 'Sem rosa bebê e sem branco, nem em tons similares.',
-      cor: null
+      chave: 'fotografos',
+      img: 'assets/arte/cartilha/fotografos.webp',
+      texto: 'Não dificulte o trabalho dos fotógrafos'
+    },
+    {
+      chave: 'pontual',
+      img: 'assets/arte/cartilha/pontual.webp',
+      texto: 'Não se atrase, seja pontual'
+    },
+    {
+      chave: 'bebida',
+      img: 'assets/arte/cartilha/bebida.webp',
+      texto: 'Não haverá bebidas alcoólicas'
+    },
+    {
+      chave: 'rosa',
+      img: 'assets/arte/cartilha/rosa.webp',
+      texto: 'Não vá de rosa, é a cor das madrinhas'
+    },
+    {
+      chave: 'flash',
+      img: 'assets/arte/cartilha/flash.webp',
+      texto: 'Tire fotos sem flash'
+    },
+    {
+      chave: 'branco',
+      img: 'assets/arte/cartilha/branco.webp',
+      texto: 'Não use branco, é a cor da noiva'
+    },
+    {
+      chave: 'abraco',
+      img: 'assets/arte/cartilha/abraco.webp',
+      texto: 'Nos dê um abraço antes de ir embora'
     }
   ],
 
