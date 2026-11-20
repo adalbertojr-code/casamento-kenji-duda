@@ -365,17 +365,18 @@
 }
 
 .papel {
-  display: grid;
-  grid-template-columns: auto minmax(0, 1fr);
+  display: flex;
   align-items: center;
-  gap: clamp(12px, 1.8vw, 18px);
+  gap: clamp(14px, 2vw, 20px);
   text-align: left;
 }
 
 .papel__arte {
-  width: clamp(58px, 7vw, 78px);
+  width: clamp(56px, 10vw, 76px);
   height: auto;
   display: block;
+  flex-shrink: 0;
+  object-fit: contain;
 }
 
 .papel__texto {
@@ -398,7 +399,7 @@
 
   .traje__papeis { gap: clamp(12px, 3vw, 18px) clamp(10px, 3vw, 16px); }
 
-  .papel__arte { width: clamp(46px, 12vw, 62px); }
+  .papel__arte { width: clamp(90px, 22vw, 120px); }
 
   .papel__texto { font-size: .7rem; }
 }
