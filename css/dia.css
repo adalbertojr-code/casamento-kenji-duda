@@ -361,6 +361,8 @@
   margin: 0;
   width: 100%;
   max-width: 560px;
+  /* respiro maior entre o texto do traje e a cartilha */
+  margin-left: clamp(16px, 4vw, 52px);
 }
 
 .traje__cartilha img {
