@@ -179,16 +179,6 @@
   function montarTraje() {
     texto($('#trajeNome'), CONFIG.traje || '');
     texto($('#trajeNota'), CONFIG.trajeNota || '');
-
-    const caixa = $('#trajePapeis');
-    if (!caixa) return;
-
-    caixa.innerHTML = (CONFIG.trajes || []).map((p) =>
-      '<article class="papel papel--' + escapar(p.chave) + '">' +
-        '<svg class="papel__arte" aria-hidden="true"><use href="#' + escapar(p.icone) + '"/></svg>' +
-        '<p class="papel__texto">' + escapar(p.texto) + '</p>' +
-      '</article>'
-    ).join('');
   }
 
   /* ---------------- história ---------------- */
