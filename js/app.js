@@ -185,7 +185,7 @@
 
     caixa.innerHTML = (CONFIG.trajes || []).map((p) =>
       '<article class="papel papel--' + escapar(p.chave) + '">' +
-        '<img class="papel__arte" src="' + escapar(p.img) + '" alt="" aria-hidden="true" loading="lazy" decoding="async">' +
+        '<svg class="papel__arte" aria-hidden="true"><use href="#' + escapar(p.icone) + '"/></svg>' +
         '<p class="papel__texto">' + escapar(p.texto) + '</p>' +
       '</article>'
     ).join('');

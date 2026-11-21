@@ -45,52 +45,52 @@ const CONFIG = {
   trajes: [
     {
       chave: 'presenca',
-      img: 'assets/arte/cartilha/presenca.webp',
+      icone: 'i-check',
       texto: 'Confirme sua presença'
     },
     {
       chave: 'silencio',
-      img: 'assets/arte/cartilha/silencio.webp',
+      icone: 'i-celular-silencio',
       texto: 'Deixe seu celular no silencioso'
     },
     {
       chave: 'convite',
-      img: 'assets/arte/cartilha/convite.webp',
+      icone: 'i-envelope-coracao',
       texto: 'Não convide outras pessoas'
     },
     {
       chave: 'fotografos',
-      img: 'assets/arte/cartilha/fotografos.webp',
+      icone: 'i-camera',
       texto: 'Não dificulte o trabalho dos fotógrafos'
     },
     {
       chave: 'pontual',
-      img: 'assets/arte/cartilha/pontual.webp',
+      icone: 'i-despertador',
       texto: 'Não se atrase, seja pontual'
     },
     {
       chave: 'bebida',
-      img: 'assets/arte/cartilha/bebida.webp',
+      icone: 'i-sem-bebida',
       texto: 'Não haverá bebidas alcoólicas'
     },
     {
       chave: 'rosa',
-      img: 'assets/arte/cartilha/rosa.webp',
+      icone: 'i-vestido',
       texto: 'Não vá de rosa, é a cor das madrinhas'
     },
     {
       chave: 'flash',
-      img: 'assets/arte/cartilha/flash.webp',
+      icone: 'i-sem-flash',
       texto: 'Tire fotos sem flash'
     },
     {
       chave: 'branco',
-      img: 'assets/arte/cartilha/branco.webp',
+      icone: 'i-vestido-noiva',
       texto: 'Não use branco, é a cor da noiva'
     },
     {
       chave: 'abraco',
-      img: 'assets/arte/cartilha/abraco.webp',
+      icone: 'i-abraco',
       texto: 'Nos dê um abraço antes de ir embora'
     }
   ],

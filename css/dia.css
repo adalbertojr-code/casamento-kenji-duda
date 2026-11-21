@@ -372,11 +372,11 @@
 }
 
 .papel__arte {
-  width: clamp(56px, 10vw, 76px);
-  height: auto;
+  width: clamp(34px, 4.4vw, 42px);
+  height: clamp(34px, 4.4vw, 42px);
   display: block;
   flex-shrink: 0;
-  object-fit: contain;
+  color: var(--coral);
 }
 
 .papel__texto {
@@ -399,7 +399,7 @@
 
   .traje__papeis { gap: clamp(12px, 3vw, 18px) clamp(10px, 3vw, 16px); }
 
-  .papel__arte { width: clamp(90px, 22vw, 120px); }
+  .papel__arte { width: clamp(30px, 8vw, 38px); height: clamp(30px, 8vw, 38px); }
 
   .papel__texto { font-size: .7rem; }
 }
