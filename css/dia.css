@@ -397,3 +397,19 @@
   .mapa__tela { aspect-ratio: 16 / 11; }
   .dia__data > span { font-size: .82rem; letter-spacing: .18em; }
 }
+
+/* telas estreitas: a faixa da data precisa quebrar em duas linhas
+   em vez de transbordar (ex.: iPhone 11 Pro, 375px) */
+@media (max-width: 420px) {
+  .dia__data {
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    justify-content: center;
+  }
+
+  .dia__data > span { font-size: .78rem; letter-spacing: .14em; }
+
+  .dia__data b { font-size: 1.7rem; }
+
+  .dia__data i { display: none; }
+}

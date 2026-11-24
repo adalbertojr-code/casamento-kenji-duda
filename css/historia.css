@@ -135,7 +135,10 @@
   .historia__grade {
     grid-template-columns: 1fr;
     gap: clamp(26px, 5vw, 38px);
+    align-items: start;
   }
+
+  .historia__moldura { height: auto; }
 
   .historia__foto {
     position: static;
